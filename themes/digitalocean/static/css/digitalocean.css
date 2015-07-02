@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url('../fonts/ProximaNova-Light.otf');
+}
+
+* {
+  box-sizing: border-box;
+  
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  -webkit-font-smoothing: antialiased;
+  
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /*font-family: 'Proxima Nova';*/
+}
+
+h1 {
+  font-size: 25px;
+
+  font-height: 40px;
+  /*line-height: 1.2;*/
+  line-height: 1.35;
+
+  /*font-family: 'Proxima Nova Light';*/
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  /*font-variant: normal;*/
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: normal;
+  font-variant: normal;
+  color: #888;
+  line-height: 27px;
+}
+
+a {
+  /*color: #2481b7;*/
+  color: rgb(8, 166, 238);
+  text-decoration: none;
+}
+
+.main {
+  /*width: 640px;*/
+  width: 960px;
+
+  margin-left: auto;
+  margin-right: auto;
+  /*padding-top: 90px;*/
+
+  min-height: 100%;
+
+  position: relative;
+}
+
+.header {
+  /*height: 54px;*/
+  height: 70px;
+  border-bottom: 1px solid #F5F5F5;
+  
+  /*padding-top: 16px;*/
+  padding-top: 26px;
+}
+
+.header a {
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.postsContainer {
+  padding-top: 80px;
+  padding-bottom: 120px;
+
+  /*padding-left: 200px;
+  padding-right: 200px;*/
+}
+
+.post {
+  margin-top: 38px;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 560px;
+}
+
+/*.post:not(:first-child) {
+  margin-top: 36px;
+}*/
+
+.postTitle a {
+  color: #2d2d2d;
+}
+
+.postDate {
+  /*color: #999;*/
+  color: #B9B9B9;
+  text-transform: uppercase;
+  margin-top: 8px;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  color: rgb(136, 136, 136);
+}
+
+.postContent {
+  margin-top: 42px;
+  margin-bottom: 36px;
+}
+
+.postContent p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+hr {
+  margin-top: 21px;
+  margin-bottom: 21px; 
+  border: 0px;
+  border-top: 1px solid #eee;
+}
+
+.footer {
+  /*padding-top: 30px;
+  padding-bottom: 30px;*/
+  
+  /*margin-top: 80px;*/
+  /*margin-bottom: 20px;*/
+  
+  bottom: 0px;
+  margin-bottom: 20px;
+
+  width: 100%;
+  position: absolute;
+
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+  
+  color: rgb(195, 195, 195);
+}
+
+.fadeinUp {
+    -webkit-animation: fadeInUp 500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 500ms ease-in-out;
+}
+ 
+/* Standard syntax */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+pre {
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+pre * {
+  font-weight: normal !important;
+}
+
+blockquote {
+  margin: 0px;
+
+  border-left: 4px solid #ddd;
+  padding-left: 15px;
+  
+  font-style: italic;
+}
+
+blockquote p {
+  color: #AAA;
+}
+
+ /* Borrowed from stopvisualpollution.com */
+
+.social {
+  float: right;
+}
+
+.twitter, .github {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  
+  background: #AAA;
+  transition: background 0.5s;
+  
+  margin-left: 12px;
+}
+
+.twitter {
+  /*background: #4099FF;*/
+  -webkit-mask-box-image: url("/images/twitter.svg");
+}
+
+.twitter:hover {
+  background: #4099FF;
+}
+
+.github {
+  -webkit-mask-box-image: url("/images/mark-github.svg");
+}
+
+.github:hover {
+  background: #000000;
+}
