@@ -236,3 +236,7 @@ blockquote p {
 .github:hover {
   background: #000000;
 }
+
+.twitter-follow-button {
+  float: right;
+}
