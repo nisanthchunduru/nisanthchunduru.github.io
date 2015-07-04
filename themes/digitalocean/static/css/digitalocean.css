@@ -79,12 +79,24 @@ a {
 }
 
 .header a {
-  color: #000000;
+  color: #B0BEC5;
   text-decoration: none;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.header a.active {
+  color: #000000;
+}
+
+.mainNav {
+  float: left;
+}
+
+.mainNav a {
+  margin-right: 28px;
 }
 
 .postsContainer {
@@ -239,4 +251,29 @@ blockquote p {
 
 .twitter-follow-button {
   float: right;
+}
+
+.profilePic {
+  width: 80px;
+  /*height: 80px;*/
+  height: auto;
+  border-radius: 50%;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+hr {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #888;
+  
+  margin-bottom: 30px;
 }

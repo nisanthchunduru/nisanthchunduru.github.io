@@ -1,0 +1,18 @@
+<html>
+  {{ partial "head.html" . }}
+
+  <body>
+    <div class="main">
+      {{ partial "header.html" "about" }}
+      
+      <div class="postsContainer fadeInUp">
+        <div class="post">
+          <img src="/images/Me280x80.jpg" class="profilePic"></img>
+          <hr>
+          
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
