@@ -189,7 +189,7 @@ a {
 }
 
 pre {
-  overflow: hidden;
+  overflow-y: hidden;
   margin-top: 34.5px;
   margin-bottom: 34.5px;
   padding-left: 34.5px;
@@ -199,7 +199,6 @@ pre {
 code {
   font-family: Monaco, monospace;
   font-size: 16.6px;
-  /*font-size: 23px;*/
   line-height: 1.5;
 }
 
