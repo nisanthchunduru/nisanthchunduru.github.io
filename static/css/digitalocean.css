@@ -6,6 +6,10 @@
   /*-webkit-font-smoothing: antialiased;*/
 }
 
+ul {
+  margin: 0px;
+}
+
 p {
   /*-webkit-font-smoothing: antialiased;*/
   
@@ -125,14 +129,23 @@ a {
 
 .mainNav {
   float: right; 
+  height: 32px;
+}
+
+.mainNav ul {
+  list-style: none;
+  height: 100%;
+}
+
+.mainNav li {
+  float: left;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.mainNav a:not(:last-child) {
-  /*margin-right: 28px;*/
-  margin-right: 40px;
+.mainNav li:not(:first-child) {
+  margin-left: 40px;
 }
 
 .pageContentContainer {
@@ -190,6 +203,7 @@ a {
 
 pre {
   overflow-y: hidden;
+  overflow-x: auto;
   margin-top: 34.5px;
   margin-bottom: 34.5px;
   padding-left: 34.5px;
@@ -198,8 +212,10 @@ pre {
 
 code {
   font-family: Monaco, monospace;
-  font-size: 16.6px;
-  line-height: 1.5;
+  /*font-size: 16.6px;*/
+  /*line-height: 1.5;*/
+  font-size: 14.6px;
+  line-height: 1.8;
 }
 
 hr {
@@ -265,56 +281,6 @@ blockquote {
 blockquote p {
   /*color: #AAA;*/
   /*color: #b1b2b2;*/
-}
-
- /* Borrowed from stopvisualpollution.com */
-
-.social {
-  float: right;
-}
-
-.twitter, .github {
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  
-  background: #AAA;
-  transition: background 0.5s;
-  
-  margin-left: 12px;
-}
-
-.twitter {
-  /*background: #4099FF;*/
-  -webkit-mask-box-image: url("/images/twitter.svg");
-}
-
-.twitter:hover {
-  background: #4099FF;
-}
-
-.github {
-  -webkit-mask-box-image: url("/images/mark-github.svg");
-}
-
-.github:hover {
-  background: #000000;
-}
-
-.twitter-follow-button {
-  float: right;
-}
-
-.profilePic {
-  width: 80px;
-  /*height: 80px;*/
-  height: auto;
-  border-radius: 50%;
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 32px;
 }
 
 hr {
