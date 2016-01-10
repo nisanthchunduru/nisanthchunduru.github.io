@@ -3,13 +3,10 @@
 
   <body>
     <div class="main">
-      {{ partial "header.html" "about" }}
+      {{ partial "header.html" . }}
       
-      <div class="postsContainer fadeInUp">
+      <div class="pageContentContainer fadeInUp">
         <div class="post">
-          <img src="/images/Me280x80.jpg" class="profilePic"></img>
-          <hr>
-          
           {{ .Content }}
         </div>
       </div>
