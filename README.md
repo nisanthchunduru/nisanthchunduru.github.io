@@ -13,7 +13,7 @@ brew update && brew install hugo
 
 ## Usage
 
-To write new  blog post, run
+To write a new blog post, run
 
 ```
 hugo server --buildDrafts --watch
