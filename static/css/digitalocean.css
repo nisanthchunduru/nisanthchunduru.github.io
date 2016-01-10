@@ -152,20 +152,14 @@ a {
   /*padding-top: 80px;*/
   padding-top: 32px;
   padding-bottom: 120px;
-}
-
-.post {
-  margin-top: 38px;
-
+  width: 704px;
   margin-left: auto;
   margin-right: auto;
-  /*width: 560px;*/
-  width: 704px;
 }
 
-/*.post:not(:first-child) {
-  margin-top: 36px;
-}*/
+.post, .postSummary {
+  margin-top: 38px;
+}
 
 .postTitle a {
   color: #222;
@@ -219,10 +213,10 @@ code {
 }
 
 hr {
-  margin-top: 21px;
-  margin-bottom: 21px; 
   border: 0px;
   border-top: 1px solid #eee;
+  margin-top: 48px;
+  margin-bottom: 48px;
 }
 
 .footer {
@@ -281,9 +275,4 @@ blockquote {
 blockquote p {
   /*color: #AAA;*/
   /*color: #b1b2b2;*/
-}
-
-hr {
-  margin-top: 48px;
-  margin-bottom: 48px;
 }

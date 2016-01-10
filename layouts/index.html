@@ -9,7 +9,7 @@
         <div class="postsList">
           {{ range .Data.Pages }}
             {{ if eq .Section "posts"}}
-              <div class="post">
+              <div class="postSummary">
                 <h1 class="postTitle"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
                 {{ partial "posts/date.html" . }}
               </div>
