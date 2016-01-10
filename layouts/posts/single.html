@@ -1,17 +1,21 @@
 <html>
   {{ partial "head.html" . }}
 
-  <div class="main">
-    {{ partial "header.html" . }}
+  <body>
+    <div class="main">
+      {{ partial "header.html" . }}
 
-    <div class="pageContentContainer fadeInUp">
-      <div class="post">
-        <h1 class="postTitle">{{ .Title }}</h1>
-        {{ partial "posts/date.html" . }}
+      <div class="pageContentContainer fadeInUp">
+        <div class="post">
+          <h1 class="postTitle">{{ .Title }}</h1>
+          {{ partial "posts/date.html" . }}
 
 
-        <div class="postContent">{{ .Content }}</div>
+          <div class="postContent">{{ .Content }}</div>
+        </div>
       </div>
     </div>
-  </div>
+
+    {{ partial "foot.html" . }}
+  </body>
 </html>
