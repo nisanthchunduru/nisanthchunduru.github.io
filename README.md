@@ -10,7 +10,6 @@ To install hugo, run
 brew update && brew install hugo
 ```
 
-
 ## Usage
 
 To start hugo locally, run
