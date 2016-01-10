@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-hugo --theme=digitalocean
+hugo
 
 cd public
 git add -A
 
-git commit -m "Rebuilding blog"
+git commit -m "Publish blog"
 
 git push origin master
 
