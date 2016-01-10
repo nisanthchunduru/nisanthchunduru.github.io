@@ -27,7 +27,8 @@ To retry a subset of failed jobs, say email notifications that have failed becau
 
 {{< highlight ruby >}}
 retry_if do |job|
-  job['payload']['class'] == 'SendEmailNotifications' && job['exception'] == 'Net::SMTPServerBusy'
+  job['payload']['class'] == 'SendEmailNotifications' &&
+  job['exception'] == 'Net::SMTPServerBusy'
 end
 {{< /highlight >}}
 

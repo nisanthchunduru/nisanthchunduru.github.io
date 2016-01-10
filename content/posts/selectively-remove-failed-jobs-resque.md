@@ -6,7 +6,7 @@ draft = true
 
 Copy the code snippet below and paste it in a rails console.
 
-```ruby
+{{< highlight ruby >}}
 def delete_if
   redis = Resque.redis
 
@@ -22,15 +22,15 @@ def delete_if
     redo
   end
 end
-```
+{{< /highlight >}}
 
 To selectively delete a subset of failed jobs, say we wish delete all push notification jobs that have failed because of http errors, run
 
-```ruby
+{{< highlight ruby >}}
 delete_if do |job|
   job['payload']['class'] == 'SendPushNotification' &&
     job['exception'] == 'Pusher::HTTPError'
 end
-```
+{{< /highlight >}}
 
 in the console.

@@ -4,20 +4,21 @@ title = "Remove ActiveRecord model from ElasticSearch index with tire gem"
 draft = true
 +++
 
-Say, we have an ActiveRecord model `Ticket`
+Say, there is an ActiveRecord model `Ticket`
 
-```ruby
+{{< highlight ruby >}}
 class Ticket < ActiveRecord::Base
-  # Tire setup
-  # ...
+  include Tire::Model::Search
+  # Tire gem setup...
 end
-```
+{{< /highlight >}}
 
-If we have a Ticket document in ElasticSearch and wish to delete it, we can do so with its document ID
+and a `Ticket` document in ElasticSearch that needs to be deleted. To delete the document, copy paste the following code in a rails console
 
-```ruby
-document_id = ticket.id
+{{< highlight ruby >}}
+ticket_id = 1234
+document_id = ticket_id
 Ticket.index.remove(Ticket.document_type, document_id)
-```
+{{< /highlight >}}
 
-Quite handy if an ActiveRecord model is deleted, but a corresponding delete didn't happen in ElasticSearch (for example, if the delete call to elasticsearch  failed due to network issues etc.)
+This script is quite handy in situations where an ActiveRecord model is deleted from the database but the corresponding document wasn't deleted in Elasticsearch (due to network issues etc.)
