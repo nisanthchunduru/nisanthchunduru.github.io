@@ -52,11 +52,18 @@ h1 {
 
 h2 {
   font-size: 28px;
+  margin-top: 23px;
   margin-bottom: 34.5px;
   color: #222;
 }
 
-p {
+h3 {
+  font-size: 23px;
+  color: #222;
+  margin-top: 34.5px;
+}
+
+p, ul {
   font-size: 23px;
   font-weight: normal;
   line-height: 34.5px;
@@ -149,7 +156,6 @@ a {
 }
 
 .pageContentContainer {
-  /*padding-top: 80px;*/
   padding-top: 32px;
   padding-bottom: 120px;
   width: 704px;
@@ -157,8 +163,13 @@ a {
   margin-right: auto;
 }
 
-.post, .postSummary {
+.pageContent, .post, .postSummary {
   margin-top: 38px;
+}
+
+.pageContentContainer ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .postTitle a {
