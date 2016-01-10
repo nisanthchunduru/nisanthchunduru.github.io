@@ -13,4 +13,4 @@ Hello, I'm Nisanth. I'm a Ruby Developer at [SupportBee](https://supportbee.com)
 
 Built with [Hugo](http://gohugo.io/).
 <br>Hosted on [Github Pages](https://pages.github.com/).
-<br>Theme based on [Numi's Blog](http://numi.io/blog/) and [Jekyll's Kactus Theme](https://github.com/nickbalestra/kactus).
+<br>Theme borrowed from Pocket app and [Jekyll's Kactus Theme](https://github.com/nickbalestra/kactus).
