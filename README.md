@@ -13,13 +13,13 @@ brew update && brew install hugo
 
 ## Usage
 
-To write a new blog post, run
+To start hugo locally, run
 
 ```
 hugo server --buildDrafts --watch
 ```
 
-To publish the blog post, run
+To publish the blog after adding a blog post, run
 
 ```
 bin/deploy
