@@ -23,3 +23,7 @@ To publish the blog after adding a blog post, run
 ```
 bin/deploy
 ```
+
+## TODO
+
+- Add a page with a list of books I like
