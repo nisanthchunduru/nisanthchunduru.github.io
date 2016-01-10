@@ -4,11 +4,11 @@
   <div class="main">
     {{ partial "header.html" . }}
 
-    <div class="postsContainer fadeInUp">
+    <div class="pageContentContainer fadeInUp">
       <div class="post">
         <h1 class="postTitle">{{ .Title }}</h1>
+        {{ partial "posts/date.html" . }}
 
-        <p class="postDate">{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
 
         <div class="postContent">{{ .Content }}</div>
       </div>

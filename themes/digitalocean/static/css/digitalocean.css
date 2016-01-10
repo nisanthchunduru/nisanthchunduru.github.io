@@ -1,64 +1,75 @@
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-Regular.otf');
-}
-
-@font-face {
-  font-family: 'Proxima Nova Light';
-  src: url('../fonts/ProximaNova-Light.otf');
-}
+/* Test comment */
 
 * {
   box-sizing: border-box;
   
-  -webkit-font-smoothing: antialiased;
+  /*-webkit-font-smoothing: antialiased;*/
 }
 
 p {
-  -webkit-font-smoothing: antialiased;
+  /*-webkit-font-smoothing: antialiased;*/
   
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
 html {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
   /*font-family: 'Proxima Nova';*/
+
+  font-family: 'ff-yoga-web-pro', Helvetica, Arial, sans-serif;
 }
 
 h1 {
-  font-size: 25px;
+  /*font-size: 25px;*/
 
-  font-height: 40px;
+  /*font-height: 40px;*/
   /*line-height: 1.2;*/
-  line-height: 1.35;
+  /*line-height: 1.35;*/
 
   /*font-family: 'Proxima Nova Light';*/
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  /*font-weight: 300;*/
   /*font-variant: normal;*/
+
+  font-family: 'ff-yoga-web-pro', Helvetica, Arial, sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #222;
 
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
+.postsList h1 {
+  font-size: 28px;
+}
+
 p {
-  font-size: 16px;
+  /*font-size: 16px;*/
+  /*font-weight: normal;*/
+  /*font-variant: normal;*/
+  /*color: #888;*/
+  /*line-height: 27px;*/
+
+  font-size: 23px;
   font-weight: normal;
-  font-variant: normal;
-  color: #888;
-  line-height: 27px;
+  line-height: 34.5px;
+  color: #313131;
+  text-rendering: optimizeLegibility;
 }
 
 a {
   /*color: #2481b7;*/
-  color: rgb(8, 166, 238);
+  /*color: rgb(8, 166, 238);*/
+  color: #43aea8;
   text-decoration: none;
 }
 
 .main {
   /*width: 640px;*/
-  width: 960px;
+  /*width: 960px;*/
 
   margin-left: auto;
   margin-right: auto;
@@ -71,20 +82,41 @@ a {
 
 .header {
   /*height: 54px;*/
-  height: 70px;
-  border-bottom: 1px solid #F5F5F5;
+  /*height: 70px;*/
+  /*border-bottom: 1px solid #F5F5F5;*/
+  border-bottom: 1px solid #e7e7e7;
+  height: 68px; /* 18 + 32 + 18 */
   
   /*padding-top: 16px;*/
-  padding-top: 26px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  width: 100%;
+  /*background-color: #fbf0d9;*/
+}
+
+.avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 4px;
 }
 
 .header a {
-  color: #B0BEC5;
+  /*color: #B0BEC5;*/
   text-decoration: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
+  /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  /*font-size: 13px;*/
+  /*text-transform: uppercase;*/
+
+  /*font-family: 'proxima-nova';*/
+  font-family: 'Arbutus Slab', serif;
+  font-size: 15px;
+  font-size: 16.5px;
+  font-weight: 600;
+  /*color: #313131;*/
+  color: #5b4636;
 }
 
 .header a.active {
@@ -92,19 +124,21 @@ a {
 }
 
 .mainNav {
-  float: left;
+  float: right; 
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.mainNav a {
-  margin-right: 28px;
+.mainNav a:not(:last-child) {
+  /*margin-right: 28px;*/
+  margin-right: 40px;
 }
 
-.postsContainer {
-  padding-top: 80px;
+.pageContentContainer {
+  /*padding-top: 80px;*/
+  padding-top: 32px;
   padding-bottom: 120px;
-
-  /*padding-left: 200px;
-  padding-right: 200px;*/
 }
 
 .post {
@@ -112,7 +146,8 @@ a {
 
   margin-left: auto;
   margin-right: auto;
-  width: 560px;
+  /*width: 560px;*/
+  width: 704px;
 }
 
 /*.post:not(:first-child) {
@@ -125,22 +160,47 @@ a {
 
 .postDate {
   /*color: #999;*/
-  color: #B9B9B9;
+  /*color: #B9B9B9;
   text-transform: uppercase;
   margin-top: 8px;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
-  color: rgb(136, 136, 136);
+  color: rgb(136, 136, 136);*/
+
+  font-family: 'ff-yoga-web-pro', Georgia, serif;
+  font-size: 18.63px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.767px;
+  color: #b1b2b2;
+
+  margin-top: 16.6px;
 }
 
 .postContent {
-  margin-top: 42px;
+  /*margin-top: 42px;*/
+  margin-top: 26px;
   margin-bottom: 36px;
 }
 
 .postContent p {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+pre {
+  overflow: hidden;
+  margin-top: 34.5px;
+  margin-bottom: 34.5px;
+  padding-left: 34.5px;
+  padding-left: 34.5px;
+}
+
+code {
+  font-family: Monaco, monospace;
+  font-size: 16.6px;
+  /*font-size: 23px;*/
+  line-height: 1.5;
 }
 
 hr {
@@ -189,15 +249,6 @@ hr {
     }
 }
 
-pre {
-  margin-top: 0px;
-  margin-bottom: 0px;
-
-  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  font-size: 13px;
-  line-height: 17px;
-}
-
 pre * {
   font-weight: normal !important;
 }
@@ -205,14 +256,16 @@ pre * {
 blockquote {
   margin: 0px;
 
-  border-left: 4px solid #ddd;
+  /*border-left: 4px solid #ddd;*/
+  border-left: 2px solid #b1b2b2;
   padding-left: 15px;
   
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 blockquote p {
-  color: #AAA;
+  /*color: #AAA;*/
+  /*color: #b1b2b2;*/
 }
 
  /* Borrowed from stopvisualpollution.com */

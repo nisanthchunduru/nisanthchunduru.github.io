@@ -5,15 +5,17 @@
     <div class="main">
       {{ partial "header.html" . }}
 
-      <div class="postsContainer fadeInUp">
-        {{ range .Data.Pages }}
-          {{ if eq .Section "posts"}}
-            <div class="post">
-              <h1 class="postTitle"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-              <p class="postDate">{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-            </div>
+      <div class="pageContentContainer fadeInUp">
+        <div class="postsList">
+          {{ range .Data.Pages }}
+            {{ if eq .Section "posts"}}
+              <div class="post">
+                <h1 class="postTitle"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+                {{ partial "posts/date.html" . }}
+              </div>
+            {{ end }}
           {{ end }}
-        {{ end }}
+        </div>
       </div>
     </div>
   </body>

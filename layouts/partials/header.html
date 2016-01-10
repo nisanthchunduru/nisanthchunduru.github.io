@@ -1,13 +1,9 @@
 <div class="header">
+  <a href="{{ .Site.BaseURL }}">
+    <img src="{{ .Site.BaseURL }}/images/avatar.jpeg" class="avatar"></img>
+  </a>
   <nav class="mainNav">
-    {{ if eq . "about" }}
-      <a href="/" class="title">Nisanth's Blog</a>
-      <a href="/about" class="active">About</a>
-    {{ else }}
-      <a href="/" class="title active">Nisanth's Blog</a>
-      <a href="/about">About</a>
-    {{ end }}
+    <a href="/about" class="active">About</a>
+    <a class="twitter-follow-button" href="https://twitter.com/nisanth074" data-show-count="false"></a>
   </nav>
-  
-  <a class="twitter-follow-button" href="https://twitter.com/nisanth074" data-show-count="false"> Follow @nisanth074</a>
 </div>
