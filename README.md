@@ -1,8 +1,17 @@
 Source code of my [blog](https://nisanth074.github.io)
 
-## Usage
+## Installation
 
-The blog is built with [Hugo](https://gohugo.io/), a fast static site generator written in golang.
+The blog is built with [Hugo](https://gohugo.io/), a fast static site generator written in golang
+
+To install hugo, run
+
+```
+brew update && brew install hugo
+```
+
+
+## Usage
 
 To write new  blog post, run
 
