@@ -1,7 +1,6 @@
 +++
 date = "2014-05-12T14:58:53+05:30"
 title = "Selectively remove failed jobs from Resque 1.x"
-draft = true
 +++
 
 Copy the code snippet below and paste it in a rails console.

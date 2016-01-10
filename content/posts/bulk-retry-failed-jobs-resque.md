@@ -1,5 +1,5 @@
 +++
-date = "2015-01-08T14:58:53+05:30"
+date = "2014-05-22T14:58:53+05:30"
 title = "Bulk retry failed jobs in Resque 1.x"
 +++
 

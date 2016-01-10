@@ -12,7 +12,7 @@ class Ticket < ActiveRecord::Base
 end
 {{< /highlight >}}
 
-and a `Ticket` document in ElasticSearch that needs to be deleted. To delete the document, copy paste the following code in a rails console
+and a `Ticket` document in ElasticSearch that you wish to delete. To delete the document, copy paste the following code in a rails console
 
 {{< highlight ruby >}}
 ticket_id = 1234
@@ -20,4 +20,4 @@ document_id = ticket_id
 Ticket.index.remove(Ticket.document_type, document_id)
 {{< /highlight >}}
 
-This script is quite handy in situations where an ActiveRecord model is deleted from the database but the corresponding document wasn't deleted in Elasticsearch (due to network issues etc.)
+This script is quite handy in situations where an ActiveRecord model was deleted from the database but the corresponding document wasn't deleted in Elasticsearch (due to network issues etc.)
