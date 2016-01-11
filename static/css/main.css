@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'ff-yoga-web-pro', Helvetica, Arial, sans-serif;
+  font-size: 62.5%; /* https://developer.mozilla.org/en/docs/Web/CSS/font-size */
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-family: 'ff-yoga-web-pro', Helvetica, Arial, sans-serif;
+  font-size: 4.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #222;
+}
+
+h2 {
+  font-size: 2.8rem;
+  color: #222;
+
+  margin-top: 23px;
+  margin-bottom: 34.5px;
+}
+
+h3 {
+  font-size: 2.3rem;
+  color: #222;
+
+  margin-top: 34.5px;
+}
+
+p, ul {
+  font-size: 2.3rem;
+  font-weight: normal;
+  line-height: 3.45rem;
+  color: #313131;
+}
+
+blockquote {
+  padding-left: 15px;
+
+  border-left: 2px solid #b1b2b2;
+}
+
+a {
+  text-decoration: none;
+  color: #43aea8;
+}
+
+pre {
+  margin-top: 34.5px;
+  margin-bottom: 34.5px;
+  padding-left: 34.5px;
+  padding-left: 34.5px;
+
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+code {
+  font-family: Monaco, monospace;
+  font-size: 1.46rem;
+  line-height: 1.8;
+}
+
+.main {
+  min-height: 100%;
+
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  border-top: 1px solid #eee;
+}
+
+/*
+Header
+*/
+
+.header {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  height: 68px; /* 18 (paddingTop) + 32 (avatarHeight) + 18 (paddingBottom) */
+  width: 100%;
+
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 4px;
+}
+
+.header a {
+  font-family: 'Arbutus Slab', serif;
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #5b4636;
+
+  text-decoration: none;
+}
+
+.mainNav {
+  height: 32px;
+  float: right; 
+}
+
+.mainNav ul {
+  height: 100%;
+  list-style: none;
+}
+
+.mainNav li {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  float: left;
+}
+
+.mainNav li:not(:first-child) {
+  margin-left: 40px;
+}
+
+.pageContentContainer {
+  width: 704px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 32px;
+  padding-bottom: 120px;
+}
+
+.pageContentContainer ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pageContent, .post, .postSummary {
+  margin-top: 38px;
+}
+
+.postTitle a {
+  color: #222;
+}
+
+.postsList .postTitle {
+  font-size: 2.8rem;
+}
+
+.postDate {
+  font-size: 1.863rem;
+  font-weight: 400;
+  line-height: 1.6767rem;
+  color: #b1b2b2;
+
+  margin-top: 16.6px;
+}
+
+.postContent {
+  margin-top: 26px;
+  margin-bottom: 36px;
+}
+
+.postContent p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
