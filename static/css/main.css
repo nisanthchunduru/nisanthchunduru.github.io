@@ -105,10 +105,8 @@ Header
 }
 
 .header a {
-  font-family: 'Arbutus Slab', serif;
   font-size: 1.65rem;
-  font-weight: 600;
-  color: #5b4636;
+  color: #313131;
 
   text-decoration: none;
 }
