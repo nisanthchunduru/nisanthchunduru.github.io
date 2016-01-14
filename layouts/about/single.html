@@ -4,11 +4,9 @@
   <body>
     {{ partial "header.html" . }}
 
-    <div class="main frame">
-      <div class="page bit-60 fade-in-up">
-        {{ .Content }}
-      </div>
-    </div>
+    {{ partial "main.html" . }}
+      {{ .Content }}
+    {{ partial "main_close.html" . }}
 
     {{ partial "foot.html" . }}
   </body>

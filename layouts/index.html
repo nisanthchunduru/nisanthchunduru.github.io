@@ -4,20 +4,18 @@
   <body>
     {{ partial "header.html" . }}
 
-    <div class="main frame">
-      <div class="page bit-60 fade-in-up">
-        <div class="posts-list">
-          {{ range .Data.Pages }}
-            {{ if eq .Section "posts"}}
-              <div class="post-summary">
-                <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-                {{ partial "posts/date.html" . }}
-              </div>
-            {{ end }}
+    {{ partial "main.html" . }}
+      <div class="posts-list">
+        {{ range .Data.Pages }}
+          {{ if eq .Section "posts"}}
+            <div class="post-summary">
+              <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+              {{ partial "posts/date.html" . }}
+            </div>
           {{ end }}
-        </div>
+        {{ end }}
       </div>
-    </div>
+    {{ partial "main_close.html" }}
 
     {{ partial "foot.html" . }}
   </body>

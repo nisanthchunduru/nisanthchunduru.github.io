@@ -4,16 +4,14 @@
   <body>
     {{ partial "header.html" . }}
 
-    <div class="main frame">
-      <div class="page bit-60 fade-in-up">
-        <div class="post">
-          <h1 class="post-title">{{ .Title }}</h1>
-          {{ partial "posts/date.html" . }}
+    {{ partial "main.html" . }}
+      <div class="post">
+        <h1 class="post-title">{{ .Title }}</h1>
+        {{ partial "posts/date.html" . }}
 
-          <div class="post-content">{{ .Content }}</div>
-        </div>
+        <div class="post-content">{{ .Content }}</div>
       </div>
-    </div>
+    {{ partial "main_close.html" . }}
 
     {{ partial "foot.html" . }}
   </body>
