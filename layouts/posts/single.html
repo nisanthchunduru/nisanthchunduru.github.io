@@ -5,13 +5,13 @@
     <div class="main">
       {{ partial "header.html" . }}
 
-      <div class="pageContentContainer fadeInUp">
+      <div class="page fade-in-up">
         <div class="post">
-          <h1 class="postTitle">{{ .Title }}</h1>
+          <h1 class="post-title">{{ .Title }}</h1>
           {{ partial "posts/date.html" . }}
 
 
-          <div class="postContent">{{ .Content }}</div>
+          <div class="post-content">{{ .Content }}</div>
         </div>
       </div>
     </div>

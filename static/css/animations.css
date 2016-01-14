@@ -1,9 +1,9 @@
-.fadeinUp {
-    -webkit-animation: fadeInUp 500ms ease-in-out; /* Chrome, Safari, Opera */
-    animation: fadeInUp 500ms ease-in-out;
+.fade-in-up {
+    -webkit-animation: fade-in-up 500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fade-in-up 500ms ease-in-out;
 }
  
-@keyframes fadeInUp {
+@keyframes fade-in-up {
   0% {
       opacity: 0;
       transform: translateY(40px);

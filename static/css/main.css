@@ -116,29 +116,29 @@ Header
   text-decoration: none;
 }
 
-.mainNav {
+.top-nav {
   height: 32px;
 }
 
-.mainNav ul {
+.top-nav ul {
   height: 100%;
   padding: 0px;
 
   list-style: none;
 }
 
-.mainNav li {
+.top-nav li {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   float: left;
 }
 
-.mainNav li:not(:last-child) {
+.top-nav li:not(:last-child) {
   margin-right: 40px;
 }
 
-.pageContentContainer {
+.page {
   margin-left: auto;
   margin-right: auto;
 
@@ -146,24 +146,24 @@ Header
   padding-bottom: 120px;
 }
 
-.pageContentContainer ul {
+.page ul {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.pageContent, .post, .postSummary {
+.page-content, .post, .post-summary {
   margin-top: 38px;
 }
 
-.postTitle a {
+.post-title a {
   color: #222;
 }
 
-.postsList .postTitle {
+.posts-list .post-title {
   font-size: 2.8rem;
 }
 
-.postDate {
+.post-date {
   font-size: 1.863rem;
   font-weight: 400;
   line-height: 1.6767rem;
@@ -172,12 +172,12 @@ Header
   margin-top: 16.6px;
 }
 
-.postContent {
+.post-content {
   margin-top: 26px;
   margin-bottom: 36px;
 }
 
-.postContent p {
+.post-content p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
