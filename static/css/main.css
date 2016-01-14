@@ -92,14 +92,30 @@ Header
 */
 
 .header {
-  margin-left: 20%;
-  margin-right: 20%;
   margin-top: 48px;
 
   height: 68px; /* 18 (paddingTop) + 32 (avatarHeight) + 18 (paddingBottom) */
 }
 
-.avatar-container {
+.header, .page {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+@media (max-device-width: 414px) { /* iPhone 6 Plus width */
+  .header, .page {
+    margin-left: 8%;
+    margin-right: 8%;
+    width: 84%;
+  }
+}
+
+@media (min-device-width: 414px) and (max-device-width: 768px) { /* iPad width */
+  .header, .page {
+    margin-left: 12%;
+    margin-right: 12%;
+    width: 76%;
+  }
 }
 
 .avatar {
@@ -140,8 +156,6 @@ Header
 }
 
 .page {
-  margin-left: 20%;
-
   padding-top: 32px;
   padding-bottom: 120px;
 }
