@@ -92,13 +92,14 @@ Header
 */
 
 .header {
+  margin-left: 20%;
+  margin-right: 20%;
   margin-top: 48px;
 
   height: 68px; /* 18 (paddingTop) + 32 (avatarHeight) + 18 (paddingBottom) */
 }
 
 .avatar-container {
-  text-align: center;
 }
 
 .avatar {
@@ -121,8 +122,9 @@ Header
 
 .top-nav ul {
   height: 100%;
-  padding: 0px;
+  float: right;
 
+  padding: 0px;
   list-style: none;
 }
 
@@ -138,7 +140,7 @@ Header
 }
 
 .page {
-  margin-left: 25%;
+  margin-left: 20%;
 
   padding-top: 32px;
   padding-bottom: 120px;
