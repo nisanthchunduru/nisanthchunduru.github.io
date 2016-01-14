@@ -24,6 +24,8 @@ To publish the blog after adding a blog post, run
 bin/deploy
 ```
 
-## TODO
+## Why
 
-- Add a page with a list of books I like
+Why build a custom blog?
+
+Its mostly an experiment to learn CSS.
