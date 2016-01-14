@@ -2,14 +2,13 @@
   {{ partial "head.html" . }}
 
   <body>
-    <div class="main">
-      {{ partial "header.html" . }}
+    {{ partial "header.html" . }}
 
-      <div class="page fade-in-up">
+    <div class="main frame">
+      <div class="page bit-50 fade-in-up">
         <div class="post">
           <h1 class="post-title">{{ .Title }}</h1>
           {{ partial "posts/date.html" . }}
-
 
           <div class="post-content">{{ .Content }}</div>
         </div>

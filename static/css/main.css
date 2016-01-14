@@ -81,8 +81,6 @@ hr {
 
 .main {
   min-height: 100%;
-  width: 704px;
-  padding-left: 40px;
 
   position: relative;
   margin-left: auto;
@@ -97,12 +95,13 @@ Header
   margin-top: 48px;
 
   height: 68px; /* 18 (paddingTop) + 32 (avatarHeight) + 18 (paddingBottom) */
-  width: 100%;
+}
+
+.avatar-container {
+  text-align: center;
 }
 
 .avatar {
-  position: absolute;
-  left: -120px;
   height: 32px;
   width: 32px;
 
@@ -139,8 +138,7 @@ Header
 }
 
 .page {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 25%;
 
   padding-top: 32px;
   padding-bottom: 120px;
@@ -149,6 +147,7 @@ Header
 .page ul {
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-left: 40px;
 }
 
 .page-content, .post, .post-summary {
