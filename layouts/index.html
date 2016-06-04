@@ -2,10 +2,23 @@
   {{ partial "head.html" . }}
 
   <body>
+    <div id="particles"></div>
+
     {{ partial "header.html" . }}
 
     <div class="main frame">
       <div class="page bit-60 fade-in-up">
+        <div class="ui message" style = "margin-top: 38px;">
+          <div class="header">
+            Moving to Medium
+          </div>
+          <p>
+            Hey visitor! I've decided to publish newer posts on <a href="https://medium.com/@nisanth074">Medium</a> to reach out to a larger audience.
+            <br>
+            <br>
+            Please follow me on <a href="https://medium.com/@nisanth074">Medium</a>.</p>
+        </div>
+
         <div class="posts-list">
           {{ range .Data.Pages }}
             {{ if eq .Section "posts"}}
@@ -20,5 +33,7 @@
     </div>
 
     {{ partial "foot.html" . }}
+
+    <script type="text/javascript" src="{{ .Site.BaseURL }}/js/main.js"></script>
   </body>
 </html>

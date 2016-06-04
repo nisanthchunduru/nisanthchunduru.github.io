@@ -3,7 +3,8 @@
 }
 
 html {
-  font-family: 'ff-yoga-web-pro', Helvetica, Arial, sans-serif;
+  /*font-family: 'ff-yoga-web-pro', Helvetica, Arial, sans-serif;*/
+  font-family: 'proxima-nova';
   font-size: 62.5%; /* https://developer.mozilla.org/en/docs/Web/CSS/font-size */
 }
 
@@ -13,11 +14,14 @@ body {
 }
 
 h1 {
-  font-family: 'ff-yoga-web-pro', Helvetica, Arial, sans-serif;
+  /*font-family: 'ff-yoga-web-pro', Helvetica, Arial, sans-serif;*/
+  font-family: 'proxima-nova';
   font-size: 4.6rem;
-  font-weight: 700;
+  /*font-weight: 700;*/
+  font-weight: 300;
   line-height: 1.2;
-  color: #222;
+  /*color: #222;*/
+  color: rgb(91, 84, 91);
 }
 
 h2 {
@@ -79,10 +83,20 @@ hr {
   border-top: 1px solid #eee;
 }
 
+#particles {
+  position: absolute;
+  top: 0px;
+  height: 360px;
+  width: 100%;
+  z-index: -1;
+  background: #604966;
+}
+
 .main {
   min-height: 100%;
 
   position: relative;
+  margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -94,26 +108,59 @@ Header
 .header {
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 48px;
+  margin-top: 8px;
 
-  height: 68px; /* 18 (paddingTop) + 32 (avatarHeight) + 18 (paddingBottom) */
+  /*18 (paddingTop) + 32 (avatarHeight) + 18 (paddingBottom)*/
+  /*height: 68px;*/
 }
 
-.avatar-container {
+.header .title {
+  display: block;
+  float: left;
+  margin-top: 6px;
+
+  font-family: "proxima-nova-semibold";
+  text-transform: uppercase;
+  color: white;
+  opacity: 1;
+  font-size: 1.8rem;
 }
 
 .avatar {
-  height: 32px;
-  width: 32px;
+  display: block;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: 100px;
 
-  border-radius: 4px;
+  border-radius: 20px;
 }
 
 .header a {
-  font-size: 1.65rem;
-  color: #313131;
+  font-size: 1.5rem;
+  /*color: #313131;*/
+  color: white;
+  opacity: 0.8;
+  font-weight: 300;
+  font-family: "proxima-nova-light";
 
   text-decoration: none;
+}
+
+.header p {
+  text-align: center;
+  margin-top: 32px;
+
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+  opacity: 0.9;
+}
+
+.social {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .top-nav {
