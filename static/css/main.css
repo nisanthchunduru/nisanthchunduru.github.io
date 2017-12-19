@@ -108,10 +108,7 @@ Header
 .header {
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 8px;
-
-  /*18 (paddingTop) + 32 (avatarHeight) + 18 (paddingBottom)*/
-  /*height: 68px;*/
+  margin-top: 24px;
 }
 
 .header .title {
@@ -137,15 +134,22 @@ Header
   border-radius: 20px;
 }
 
-.header a {
-  font-size: 1.5rem;
-  /*color: #313131;*/
-  color: white;
-  opacity: 0.8;
-  font-weight: 300;
-  font-family: "proxima-nova-light";
+.logo {
+  font-weight: 700;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  color: #121212;
+  display: inline-block;
+}
 
+.header a {
   text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: #666;
+  font-weight: 700;
+  font-family: "proxima-nova-light";
+  text-transform: uppercase;
 }
 
 .header p {
@@ -163,12 +167,7 @@ Header
   margin-right: auto;
 }
 
-.top-nav {
-  height: 32px;
-}
-
 .top-nav ul {
-  height: 100%;
   float: right;
 
   padding: 0px;
@@ -178,7 +177,6 @@ Header
 .top-nav li {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
   float: left;
 }
 
