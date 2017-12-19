@@ -1,25 +1,29 @@
-Source code of my [blog](https://nisanth074.github.io)
+# nisanth074.github.io-hugo
 
-## Installation
+This repository contains the source code of my [blog](https://nisanth074.github.io)
 
-The blog is built with [Hugo](https://gohugo.io/), a fast static site generator written in golang
+## Installation & Usage
 
-To install hugo, run
+The blog is built with [Hugo](https://gohugo.io/), a fast static site generator written in the Go programming language
 
+First, install hugo
 ```
 brew update && brew install hugo
 ```
 
-## Usage
+Clone the repository
+```
+cd ~/Projects/
+git clone git@github.com:nisanth074/nisanth074.github.io-hugo.git
+```
 
-To start hugo locally, run
-
+To view the blog in your browser, run
 ```
 hugo server --buildDrafts --watch
 ```
+and visit http://localhost:1313/
 
 To publish the blog after adding a blog post, run
-
 ```
 bin/deploy
 ```
