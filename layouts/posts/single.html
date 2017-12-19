@@ -2,10 +2,10 @@
   {{ partial "head.html" . }}
 
   <body>
-    {{ partial "header.html" . }}
-
     <div class="main frame">
       <div class="page bit-60 fade-in-up">
+        <a href="/" style="font-size: 1.5rem;">← Go back to home page</a>
+
         <div class="post">
           <h1 class="post-title">{{ .Title }}</h1>
           {{ partial "posts/date.html" . }}
