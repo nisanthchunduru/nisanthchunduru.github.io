@@ -5,7 +5,30 @@ type = "library"
 
 ## Books I like
 
-Inspired by colleagues, I began to prefer books over blogposts, tutorials and other semi-structured content to learn new things. The following is a list of some wonderful books that have been recommended to me by colleagues and friends in the past two years.
+Following advice I received from a colleague at the beginning of my career, I began to prefer books over semi-structured content like blogposts, tutorials etc. to learn new things. The following is a list of some wonderful books that I like or that have been recommended to me by others in the last few years.
+
+### Ruby / Ruby on Rails
+
+- Programming Ruby, also known as "The Pickaxe book"
+- The Rails 3 Way
+- The RSpec Book
+
+### Design
+
+- Designing Web Applications (by Nathan Barry)
+
+### JavaScript
+
+- JavaScript: The Good Parts
+- Building Single Page Web Apps with Backbone.js
+
+### Computer Science
+
+- Structure and Interpretation of Computer Programs
+
+### Programming Languages & Compilers
+
+- Ruby Under a Microscope
 
 ### Productivity
 
@@ -15,21 +38,3 @@ Inspired by colleagues, I began to prefer books over blogposts, tutorials and ot
 
 - Zero to One
 
-### Development
-
-- The RSpec Book
-- Clean Code: A Handbook of Agile Software Craftsmanship
-
-### Ruby/Rails Development
-
-- Programming Ruby, also known as "The Pickaxe book"
-- The Rails 3 Way
-
-### JavaScript Development
-
-- JavaScript: The Good Parts
-- Building Single Page Web Apps with Backbone.js
-
-### Computer Science
-
-- Structure and Interpretation of Computer Programs
