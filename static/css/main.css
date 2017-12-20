@@ -30,9 +30,6 @@ h4 {
 p {
   font-size: 1em;
 }
-code {
-  /*font-size: 0.707em;*/
-}
 
 h1 {
   color: #121212;
@@ -52,10 +49,16 @@ h3 {
 }
 
 p, ul {
-  font-size: 1em;
   font-weight: normal;
   line-height: 1.76;
   color: #313131;
+}
+
+p {
+  margin-top: 1.2em;
+}
+p:nth-of-type(1) {
+  margin-top: 0;
 }
 
 blockquote {
@@ -81,6 +84,7 @@ pre {
 
 code {
   font-family: Monaco, monospace;
+  font-size: 13.2px;
   line-height: 1.5;
 }
 
