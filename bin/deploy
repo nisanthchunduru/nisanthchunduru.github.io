@@ -7,6 +7,6 @@ git add -A
 
 git commit -m "Publish blog"
 
-git push origin master
+git push -f origin master
 
 cd ..
