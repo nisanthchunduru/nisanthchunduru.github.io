@@ -241,3 +241,21 @@ Header
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.notice {
+  line-height: 2;
+  padding: 20px;
+  border-radius: 2px;
+  /* background-color: #FFD8B0; */
+  background-color: #E9F4FB;
+
+  display: flex;
+}
+
+.notice-icon {
+  margin-top: 8px;
+  margin-right: 16px;
+
+  /* color: #A28A72; */
+  color: #819FB0;
+}
