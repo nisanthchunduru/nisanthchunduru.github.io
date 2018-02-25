@@ -11,7 +11,7 @@ I wondered how they did it. I started asking people. I received many answers. Th
 
 This answer was from a [colleague](https://medium.com/@unamashana).
 
-<i>Fast forward a year …</i>
+#### Fast forward an year
 
 I’m in Bangkok, chatting with the same colleague at a cafe. It was 4 PM. Being a weekend, I had plans for the evening. My colleague enquired what they were. I responded with this long list
 

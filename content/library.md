@@ -5,7 +5,7 @@ type = "library"
 
 ## Books I like
 
-Following advice I received from a colleague at the beginning of my career, I began to prefer books over semi-structured content like blogposts, tutorials etc. to learn new things. The following is a list of some wonderful books that I like or that have been recommended to me by others in the last few years.
+I prefer learning from books over semi-structured content like blogposts, tutorials etc. The following is a list of some wonderful books that I value or that have been recommended to me by friends and colleagues in the last few years
 
 ### Ruby / Ruby on Rails
 
@@ -19,8 +19,8 @@ Following advice I received from a colleague at the beginning of my career, I be
 
 ### JavaScript
 
+- Building Single Page Web Apps with Backbone.js (by Prateek Dayal)
 - JavaScript: The Good Parts
-- Building Single Page Web Apps with Backbone.js
 
 ### Computer Science
 
