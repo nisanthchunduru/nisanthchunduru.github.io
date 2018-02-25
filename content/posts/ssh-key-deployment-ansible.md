@@ -1,6 +1,6 @@
 +++
 date = "2015-08-05T14:58:53+05:30"
-title = "Automating ssh key deployment in Rails apps with Ansible"
+title = "Automate ssh key deployment in Rails apps with Ansible"
 +++
 
 > Reposted from [SupportBee's Dev Blog](https://devblog.supportbee.com/2015/08/05/automate-ssh-key-deployment-with-ansible/)
