@@ -250,6 +250,7 @@ Header
   background-color: #E9F4FB;
 
   display: flex;
+  justify-content: center;
 }
 
 .notice-icon {
