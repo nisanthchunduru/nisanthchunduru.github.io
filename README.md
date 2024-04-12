@@ -1,6 +1,6 @@
-# nisanth074.github.io-hugo
+# blog
 
-This repository contains the source code of my [blog](https://nisanth074.github.io)
+This repository contains the source code of my [blog](https://nisanthchunduru.github.io)
 
 ## Installation & Usage
 
