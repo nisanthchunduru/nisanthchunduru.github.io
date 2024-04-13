@@ -9,7 +9,7 @@ The blog is built with [Hugo](https://gohugo.io/), a fast static site generator 
 First, clone the repository
 ```
 cd ~/Projects/
-git clone git@github.com:nisanthchunduru/blog.git
+git clone --recurse-submodules git@github.com:nisanthchunduru/blog.git
 ```
 
 Install hugo
