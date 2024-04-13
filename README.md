@@ -14,7 +14,7 @@ brew update && brew install hugo
 Clone the repository
 ```
 cd ~/Projects/
-git clone git@github.com:nisanth074/nisanth074.github.io-hugo.git
+git clone git@github.com:nisanthchunduru/blog.git
 ```
 
 To view the blog in your browser, run
