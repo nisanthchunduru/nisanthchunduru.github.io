@@ -2,3 +2,5 @@ public/
 
 # Sublime text
 blog.sublime-workspace
+
+.hugo_build.lock
