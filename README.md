@@ -14,7 +14,7 @@ git clone git@github.com:nisanthchunduru/blog.git
 
 Install hugo
 ```
-brew update && brew install hugo
+brew install hugo
 ```
 
 To view the blog in your browser, run
