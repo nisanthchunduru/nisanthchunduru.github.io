@@ -3,8 +3,6 @@ date = "2015-08-05T14:58:53+05:30"
 title = "Automate ssh key deployment in Rails apps with Ansible"
 +++
 
-> Reposted from [SupportBee's Dev Blog](https://devblog.supportbee.com/2015/08/05/automate-ssh-key-deployment-with-ansible/)
-
 I decided to automate ssh key management on servers last week, after having done it manually for a couple of days. I typically used Capistrano to automate server configuration but had been searching for a tool which had a declarative style and works over SSH (just like Capistrano). Fortunately, I found Ansible via a friend’s tweet.
 
 Ansible is written in python and easiest way to install it is with pip (a package manager for python packages).
@@ -31,7 +29,7 @@ Once installed, a user can describe the setup he’d like to have on his servers
       key: |
         ssh-rsa AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA john@gmail.com
         ssh-rsa BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB jane@Jane-Does-iMac.local
-  - name: remove ssh keys of former employees 
+  - name: remove ssh keys of former employees
     authorized_key:
       user: deploy # Configure ssh keys for deploy user
       key: |

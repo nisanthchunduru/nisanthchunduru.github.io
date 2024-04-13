@@ -3,9 +3,7 @@ date = "2014-05-22T14:58:53+05:30"
 title = "Bulk retry failed jobs in Resque 1.x"
 +++
 
-> Reposted from [SupportBee's Dev Blog](https://devblog.supportbee.com/2015/01/08/retry-subset-of-failed-jobs-in-resque/)
-
-Retrying failed jobs via Resque’s web interface is cumbersome, especially when there are more than a handful of them. So I quickly wrote down a small script that’ll do it for me. 
+Retrying failed jobs via Resque’s web interface is cumbersome, especially when there are more than a handful of them. So I quickly wrote down a small script that’ll do it for me.
 
 Open a rails console and copy paste the below snippet
 
