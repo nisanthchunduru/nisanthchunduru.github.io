@@ -108,8 +108,6 @@ hr {
 }
 
 .main {
-  min-height: 100%;
-
   position: relative;
   margin-top: 20px;
   margin-left: auto;
