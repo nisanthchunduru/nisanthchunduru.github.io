@@ -3,16 +3,15 @@
 
   <body>
     {{ partial "header.html" . }}
+
     <div class="main frame">
       <div class="page bit-60">
         <div class="posts-list">
-          {{ range .Data.Pages }}
-            {{ if eq .Section "posts"}}
-              <div class="post-summary">
-                <h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-                {{ partial "posts/date.html" . }}
-              </div>
-            {{ end }}
+          {{ range where .Site.RegularPages "Type" "posts" }}
+            <div class="post-summary">
+              <h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+              {{ partial "posts/date.html" . }}
+            </div>
           {{ end }}
         </div>
       </div>
