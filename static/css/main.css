@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'proxima-nova';
+  font-family: 'gt-walsheim-pro-regular';
   /*font-size: 62.5%;  https://developer.mozilla.org/en/docs/Web/CSS/font-size*/
   font-size: 16px;
 }
@@ -129,7 +129,6 @@ Header
   float: left;
   margin-top: 6px;
 
-  font-family: "proxima-nova-semibold";
   text-transform: uppercase;
   color: white;
   opacity: 1;
@@ -153,7 +152,6 @@ Header
   letter-spacing: 1.5px;
   color: #666;
   font-weight: 700;
-  font-family: "proxima-nova-light";
   text-transform: uppercase;
 }
 

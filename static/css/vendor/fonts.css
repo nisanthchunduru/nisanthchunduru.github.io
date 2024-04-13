@@ -77,3 +77,8 @@
   font-family: "proxima-nova-semibold";
   src: url("/fonts/ProximaNova/ProximaNova-Semibold.otf");
 }
+
+@font-face {
+  font-family: "gt-walsheim-pro-regular";
+  src: url("/fonts/gt-walsheim/GT-Walsheim-Pro-Regular.ttf");
+}
