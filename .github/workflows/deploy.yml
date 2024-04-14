@@ -26,8 +26,11 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     env:
       HUGO_VERSION: 0.124.1
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
