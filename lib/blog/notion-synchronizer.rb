@@ -102,7 +102,9 @@ class NotionSynchronizer
         blog_page_file_names << blog_page_file_name
 
         blog_page_path = File.join(destination_dir, blog_page_file_name)
-        next if File.exist?(blog_page_path) && File.mtime(blog_page_path) >= block_last_edited_at 
+        unless ENV['NOTION_SYNCHRONIZER_SKIP_OPTIMIZATIONS']
+          next if File.exist?(blog_page_path) && File.mtime(blog_page_path) >= block_last_edited_at
+        end
 
         blog_page_front_matter_yaml = blog_page_front_matter.to_yaml.chomp
         blog_page_markdown = NotionToMd.convert(page_id: block_id, token: NOTION_TOKEN)
