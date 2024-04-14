@@ -241,6 +241,10 @@ a, .post-date {
   margin-bottom: 20px;
 }
 
+.post-content img {
+  width: 100%;
+}
+
 .notice {
   line-height: 2;
   padding: 20px;
