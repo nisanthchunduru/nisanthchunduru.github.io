@@ -1,6 +1,9 @@
 public/
 
+.hugo_build.lock
+
+.env
+
 # Sublime text
 blog.sublime-workspace
 
-.hugo_build.lock
