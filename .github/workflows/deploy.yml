@@ -47,8 +47,18 @@ jobs:
         run: gem install bundler
       - name: Bundle Install
         run: bundle install
+      - name: Restore blog content from cache
+        uses: actions/cache@v2
+        with:
+          path: content
+          key: content
       - name: Sync blog content from Notion
         run: bundle exec ruby scripts/sync_blog_content_from_notion.rb
+      - name: Cache blog content
+        uses: actions/cache@v2
+        with:
+          path: content
+          key: content
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
