@@ -1,6 +1,7 @@
 +++
 date = "2014-04-26T14:58:53+05:30"
 title = "Remove ActiveRecord model from ElasticSearch index with tire gem"
+draft = true
 +++
 
 Say, there is an ActiveRecord model `Ticket`

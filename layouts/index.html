@@ -8,10 +8,12 @@
       <div class="page bit-60">
         <div class="posts-list">
           {{ range where .Site.RegularPages "Type" "posts" }}
-            <div class="post-summary">
-              <h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-              {{ partial "posts/date.html" . }}
-            </div>
+            {{ if ne .Draft true }}
+              <div class="post-summary">
+                <h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+                {{ partial "posts/date.html" . }}
+              </div>
+            {{ end }}
           {{ end }}
         </div>
       </div>
