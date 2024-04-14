@@ -25,7 +25,4 @@ and visit http://localhost:1313
 
 ## Deployment
 
-To publish the blog after adding a blog post, run
-```
-bin/deploy
-```
+The blog is deployed from GitHub Actions
