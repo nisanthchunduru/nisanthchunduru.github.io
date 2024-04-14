@@ -208,6 +208,10 @@ Header
   padding-bottom: 32px;
 }
 
+.page img {
+  width: 100%;
+}
+
 .page ul {
   margin-top: 20px;
   margin-bottom: 20px;
