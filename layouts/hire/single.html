@@ -1,0 +1,17 @@
+<html>
+  {{ partial "head.html" . }}
+
+  <body>
+    {{ partial "header.html" . }}
+
+    <div class="main frame">
+      <div class="page bit-60">
+        <div class="page-content">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+
+    {{ partial "foot.html" . }}
+  </body>
+</html>
