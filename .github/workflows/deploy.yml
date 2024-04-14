@@ -45,8 +45,18 @@ jobs:
           ruby-version: 3.2.3
       - name: Install Bundler
         run: gem install bundler
+      - name: Restore gems from cache
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: gems
       - name: Bundle Install
         run: bundle install
+      - name: Cache gems
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: gems
       - name: Restore blog content from cache
         uses: actions/cache@v2
         with:
