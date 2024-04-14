@@ -2,7 +2,7 @@
 
 This repository contains the source code of my [blog](https://nisanthchunduru.github.io)
 
-The blog is built with [Hugo](https://gohugo.io/), a fast static site generator written in the Go programming language
+The blog is built with [Hugo](https://gohugo.io/), a fast static site generator written in Go lang. Blog posts are authored in Notion https://inquisitive-bumper-4db.notion.site/blog_content-0f1b55769779411a95df1ee9b4b070c9?pvs=4 which serves as a CMS (Content Management System).
 
 ## Installation
 
