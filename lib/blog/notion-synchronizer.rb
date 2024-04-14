@@ -79,11 +79,11 @@ class NotionSynchronizer
           'date' => Time.parse(block['created_time'])
         }
         if block['properties']
-          if block['properties']['date']
+          if block.dig('properties', 'date', 'date', 'start')
             blog_page_front_matter['date'] = Time.parse(block['properties']['date']['date']['start'])
           end
 
-          if block['properties']['Name']
+          if block.dig('properties', 'Name', 'title', 0, 'plain_text')
             blog_page_front_matter['title'] = block['properties']['Name']['title'][0]['plain_text']
           end
         end
@@ -91,16 +91,20 @@ class NotionSynchronizer
           blog_page_front_matter['title'] = block['child_page']['title']
           blog_page_front_matter['type'] = block['child_page']['title']
         end
-        blog_page_front_matter_yaml = blog_page_front_matter.to_yaml.chomp
         blog_page_title = blog_page_front_matter['title']
+
+        # Ignore incomplete pages
+        next unless blog_page_front_matter['date']
+        next unless blog_page_front_matter['title']
 
         blog_page_file_name_without_extension = blog_page_title.gsub(' ', '-')
         blog_page_file_name = "#{blog_page_file_name_without_extension}.md"
-        blog_page_path = File.join(destination_dir, blog_page_file_name)
-
         blog_page_file_names << blog_page_file_name
+
+        blog_page_path = File.join(destination_dir, blog_page_file_name)
         next if File.exist?(blog_page_path) && File.mtime(blog_page_path) >= block_last_edited_at 
 
+        blog_page_front_matter_yaml = blog_page_front_matter.to_yaml.chomp
         blog_page_markdown = NotionToMd.convert(page_id: block_id, token: NOTION_TOKEN)
         blog_page_content = <<-BLOG_PAGE_CONTENT
 #{blog_page_front_matter_yaml}
