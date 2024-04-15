@@ -57,11 +57,12 @@ jobs:
         with:
           path: vendor/bundle
           key: gems
-      # - name: Restore blog content from cache
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: content
-      #     key: content
+      - name: Restore blog content from cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            content
+          key: content
       - name: Sync blog content from Notion
         run: bundle exec ruby scripts/sync_blog_content_from_notion.rb
       - name: Cache blog content
