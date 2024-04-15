@@ -65,9 +65,10 @@ jobs:
       - name: Sync blog content from Notion
         run: bundle exec ruby scripts/sync_blog_content_from_notion.rb
       - name: Cache blog content
-        uses: actions/cache@v2
+        uses: actions/cache/save@v4
         with:
-          path: content
+          path: |
+            content
           key: content
       - name: Install Hugo CLI
         run: |
