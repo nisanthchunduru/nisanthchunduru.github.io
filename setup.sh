@@ -2,6 +2,4 @@
 
 brew install hugo
 
-asdf install
-gem install bundler
-bundle install
+gem install hugo-notion --prerelease
