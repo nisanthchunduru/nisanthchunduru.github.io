@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'gt-walsheim-pro-regular';
+  font-family: 'proxima-nova';
   /*font-size: 62.5%;  https://developer.mozilla.org/en/docs/Web/CSS/font-size*/
   font-size: 16px;
 }
@@ -16,19 +16,22 @@ body {
 /* Use font sizes suggested by http://type-scale.com/ */
 /* Select 1.200 - Minor Third as the scale */
 h1 {
-  font-size: 2.074em;
+  font-size: 2.5rem;
 }
 h2 {
-  font-size: 1.728em;
+  font-size: 2.15rem;
 }
 h3 {
-  font-size: 1.44em;
+  font-size: 1.5em;
 }
 h4 {
-  font-size: 1.2em;
+  font-size: 1.25em;
 }
 p {
   font-size: 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'proxima-nova-bold';
 }
 
 h1 {
@@ -59,6 +62,10 @@ p {
 }
 p:nth-of-type(1) {
   margin-top: 0;
+}
+
+li {
+  line-height: 1.75;
 }
 
 blockquote {
@@ -128,10 +135,11 @@ Header
   float: left;
   margin-top: 6px;
 
+  /* font-family: "proxima-nova-semibold"; */
   text-transform: uppercase;
   color: white;
   opacity: 1;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .avatar {
@@ -151,6 +159,7 @@ Header
   letter-spacing: 1.5px;
   color: #666;
   font-weight: 700;
+  font-family: "proxima-nova-semibold";
   text-transform: uppercase;
 }
 
@@ -209,7 +218,6 @@ Header
 .page {
   margin-left: 20%;
 
-  padding-top: 32px;
   padding-bottom: 32px;
 }
 
