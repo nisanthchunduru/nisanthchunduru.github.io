@@ -1,0 +1,26 @@
+<html>
+  {{ partial "head.html" . }}
+
+  <body>
+    {{ partial "header.html" . }}
+
+    <div class="main frame">
+      <div class="page bit-60">
+        <div class="posts-list">
+          {{ range where .Site.RegularPages "Type" "jots" }}
+            {{ if ne .Draft true }}
+              <div class="post-summary">
+                <h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+                {{ partial "posts/date.html" . }}
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{ partial "foot.html" . }}
+
+    <script type="text/javascript" src="{{ .Site.BaseURL }}/js/main.js"></script>
+  </body>
+</html>

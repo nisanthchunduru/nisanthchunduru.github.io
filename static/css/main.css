@@ -201,6 +201,11 @@ Header
   margin-right: 40px;
 }
 
+.top-nav-icon-item {
+  display: flex;
+  align-items: center;
+}
+
 .page {
   margin-left: 20%;
 
