@@ -6,7 +6,12 @@
 
     <div class="main frame">
       <div class="page bit-60">
-        <div class="posts-list">
+        <div>
+          <h1>Hi, I'm Nisanth 👋</h1>
+          <p style="font-size: 1.5rem; margin-top: 0.75rem;">I’m an Engineering Lead proficient in Full-stack development and DevOps and passionate about AI/ML. Welcome to my corner of the web!</p>
+        </div>
+        <div style="margin-top: 2rem; border-top: 1px solid lightgray;" class="posts-list">
+          <h2 style="margin-top: 2rem;">Posts</h2>
           {{ range where .Site.RegularPages "Type" "posts" }}
             {{ if ne .Draft true }}
               <div class="post-summary">
