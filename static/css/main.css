@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'proxima-nova';
+  font-family: 'system-ui';
   /*font-size: 62.5%;  https://developer.mozilla.org/en/docs/Web/CSS/font-size*/
   font-size: 16px;
 }
@@ -31,7 +31,7 @@ p {
   font-size: 1em;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'proxima-nova-bold';
+  font-family: 'system-ui';
   line-height: 1.25;
 }
 
@@ -135,7 +135,6 @@ Header
   float: left;
   margin-top: 6px;
 
-  /* font-family: "proxima-nova-semibold"; */
   text-transform: uppercase;
   color: white;
   opacity: 1;
@@ -159,7 +158,7 @@ Header
   letter-spacing: 1.5px;
   color: #666;
   font-weight: 700;
-  font-family: "proxima-nova-semibold";
+  font-family: 'system-ui';
   text-transform: uppercase;
 }
 
