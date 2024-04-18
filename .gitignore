@@ -2,6 +2,10 @@ content/
 
 public/
 
+node_modules/
+
+tailwind.compiled.css
+
 .hugo_build.lock
 
 .env

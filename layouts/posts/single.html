@@ -4,14 +4,12 @@
   <body>
     {{ partial "header.html" . }}
 
-    <div class="main frame">
-      <div class="page bit-60">
-        <div class="post">
-          <h1 class="post-title">{{ .Title }}</h1>
-          {{ partial "posts/date.html" . }}
+    <div class="container mt-12 px-4 prose prose-lg">
+      <div class="article">
+        <h1>{{ .Title }}</h1>
+        <p class="article-date -mt-6">{{ .Date.Format "January 2, 2006" }}</p>
 
-          <div class="post-content">{{ .Content }}</div>
-        </div>
+        <div class="article-content">{{ .Content }}</div>
       </div>
     </div>
 

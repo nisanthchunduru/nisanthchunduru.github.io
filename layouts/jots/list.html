@@ -4,19 +4,17 @@
   <body>
     {{ partial "header.html" . }}
 
-    <div class="main frame">
-      <div class="page bit-60">
-        <h2>Jots</h2>
-        <div class="posts-list">
-          {{ range where .Site.RegularPages "Type" "jots" }}
-            {{ if ne .Draft true }}
-              <div class="post-summary">
-                <h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-                {{ partial "posts/date.html" . }}
-              </div>
-            {{ end }}
+    <div class="container mx-auto px-4 mt-12 prose prose-lg">
+      <h1>Jots</h1>
+      <div>
+        {{ range where .Site.RegularPages "Type" "jots" }}
+          {{ if ne .Draft true }}
+            <div class="article-summary">
+              <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+              {{ partial "posts/date.html" . }}
+            </div>
           {{ end }}
-        </div>
+        {{ end }}
       </div>
     </div>
 
