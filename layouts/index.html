@@ -14,7 +14,7 @@
         {{ range where .Site.RegularPages "Type" "posts" }}
           {{ if ne .Draft true }}
             <div class="article-summary">
-              <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+              <h3><a style="color: #000000 !important;" href="{{ .Permalink }}">{{ .Title }}</a></h1>
               {{ partial "posts/date.html" . }}
             </div>
           {{ end }}
