@@ -250,6 +250,8 @@ a, .post-date {
 .post-content {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  text-align: justify;
+  overflow-wrap: break-word;
 }
 
 .post-content p {
