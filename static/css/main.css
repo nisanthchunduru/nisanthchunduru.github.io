@@ -232,7 +232,7 @@ Header
 }
 
 .page-content, .post, .post-summary {
-  margin-top: 2rem;
+  margin-top: 0.25rem;
 }
 
 .post-title a {
@@ -249,8 +249,8 @@ a, .post-date {
 }
 
 .post-content {
-  margin-top: 26px;
-  margin-bottom: 36px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .post-content p {
