@@ -33,13 +33,15 @@
       </ul>
     </div>
 
-    <button id="nav-hamburger-icon-button" class="flex items-center sm:hidden">
-      <svg class="h-7 w-7 z-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </button>
+    <div class="sm:hidden flex justify-center p-2 rounded-full">
+      <button id="nav-hamburger-icon-button" class="flex items-center">
+        <svg class="h-7 w-7 z-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+          <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+          <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
   </nav>
 
   <div id="nav-hamburger-menu" class="hidden sm:hidden -ml-4 -mr-4 py-3 bg-white text-xl text-center">
@@ -84,7 +86,9 @@
   function toggleNavHamburgerMenu(e) {
     if (navHamburgerMenu.classList.contains("hidden")) {
       navHamburgerMenu.classList.remove("hidden");
+      navHamburgerIconButton.parentNode.classList.add("bg-gray-200")
     } else {
+      navHamburgerIconButton.parentNode.classList.remove("bg-gray-200")
       navHamburgerMenu.classList.add("hidden");
     }
   }
