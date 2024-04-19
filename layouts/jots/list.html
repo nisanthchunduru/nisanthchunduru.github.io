@@ -4,13 +4,15 @@
   <body>
     {{ partial "header.html" . }}
 
-    <div class="container px-4 mt-12 prose prose-lg">
+    <div class="container px-4 mt-12 prose sm:prose-lg">
       <h1>Jots</h1>
       <div>
         {{ range where .Site.RegularPages "Type" "jots" }}
           {{ if ne .Draft true }}
             <div class="article-summary">
-              <h3><a style="color: #000000 !important;" href="{{ .Permalink }}">{{ .Title }}</a></h1>
+              <h3 style="margin-bottom: 0px;">
+                <a style="color: #000000 !important;" href="{{ .Permalink }}">{{ .Title }}</a>
+              </h3>
               {{ partial "posts/date.html" . }}
             </div>
           {{ end }}

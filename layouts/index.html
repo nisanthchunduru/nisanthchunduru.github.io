@@ -4,7 +4,7 @@
   <body>
     {{ partial "header.html" . }}
 
-    <div class="container mt-12 px-4 prose prose-lg">
+    <div class="container mt-12 px-4 prose sm:prose-lg">
       <div>
         <h1>Hi, I'm Nisanth 👋</h1>
         <h3 class="font-normal">I’m an Engineering Lead proficient in Full-stack development and DevOps and passionate about AI/ML. Welcome to my corner of the web!</h3>
@@ -14,7 +14,9 @@
         {{ range where .Site.RegularPages "Type" "posts" }}
           {{ if ne .Draft true }}
             <div class="article-summary">
-              <h3><a style="color: #000000 !important;" href="{{ .Permalink }}">{{ .Title }}</a></h1>
+              <h3 style="margin-bottom: 0px;">
+                <a style="color: #000000 !important;" href="{{ .Permalink }}">{{ .Title }}</a>
+              </h3>
               {{ partial "posts/date.html" . }}
             </div>
           {{ end }}
