@@ -84,6 +84,8 @@
   const navHamburgerIconButton = document.getElementById("nav-hamburger-icon-button");
   const navHamburgerMenu = document.getElementById("nav-hamburger-menu");
   function toggleNavHamburgerMenu(e) {
+    e.preventDefault();
+
     if (navHamburgerMenu.classList.contains("hidden")) {
       navHamburgerMenu.classList.remove("hidden");
       navHamburgerIconButton.parentNode.classList.add("bg-gray-200")
@@ -92,5 +94,5 @@
       navHamburgerMenu.classList.add("hidden");
     }
   }
-  navHamburgerIconButton.addEventListener('click', toggleNavHamburgerMenu);
+  navHamburgerIconButton.parentNode.addEventListener('click', toggleNavHamburgerMenu);
 </script>
