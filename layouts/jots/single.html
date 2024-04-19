@@ -6,8 +6,8 @@
 
     <div class="container px-4 mt-12 prose sm:prose-lg">
       <div class="article">
-        <h1>{{ .Title }}</h1>
-        <p class="article-date -mt-6">{{ .Date.Format "January 2, 2006" }}</p>
+        <h1 style="margin-bottom: 0.5rem;">{{ .Title }}</h1>
+        <p class="article-date" style="margin-top: 0.5rem">{{ .Date.Format "January 2, 2006" }}</p>
 
         <div class="article-content">{{ .Content }}</div>
       </div>
