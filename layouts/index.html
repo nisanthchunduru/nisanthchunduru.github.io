@@ -13,7 +13,7 @@
         <h2 style="margin-top: 2rem;">Posts</h2>
         {{ range where .Site.RegularPages "Type" "posts" }}
           {{ if ne .Draft true }}
-            <div class="article-summary">
+            <div>
               <h3 style="margin-bottom: 0px;">
                 <a style="color: #000000 !important;" href="{{ .Permalink }}">{{ .Title }}</a>
               </h3>
