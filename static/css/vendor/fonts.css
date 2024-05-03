@@ -22,3 +22,15 @@
   font-family: "gt-walsheim-pro-regular";
   src: url("/fonts/gt-walsheim-pro/GT-Walsheim-Pro-Regular.ttf");
 }
+
+@font-face {
+  font-family: "colfax";
+  font-weight: normal;
+  src: url("/fonts/colfax/Colfax-Regular.otf");
+}
+
+@font-face {
+  font-family: "colfax";
+  font-weight: bold;
+  src: url("/fonts/colfax/Colfax-Bold.otf");
+}

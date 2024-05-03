@@ -10,6 +10,7 @@ html {
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
+  font-family: "colfax", sans-serif;
 }
 
 a {
