@@ -26,11 +26,11 @@
 @font-face {
   font-family: "colfax";
   font-weight: normal;
-  src: url("/fonts/colfax/Colfax-Regular.otf");
+  src: url("/fonts/Colfax/Colfax-Regular.otf");
 }
 
 @font-face {
   font-family: "colfax";
   font-weight: bold;
-  src: url("/fonts/colfax/Colfax-Bold.otf");
+  src: url("/fonts/Colfax/Colfax-Bold.otf");
 }
