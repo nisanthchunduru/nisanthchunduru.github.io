@@ -35,8 +35,3 @@ hr {
 a, .article-date {
   color: #FF3130 !important;
 }
-
-.article-content {
-  text-align: justify;
-  overflow-wrap: break-word;
-}
