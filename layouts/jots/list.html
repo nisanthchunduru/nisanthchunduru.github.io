@@ -25,7 +25,7 @@
           {{ if ne .Draft true }}
             <div>
               <h3 style="margin-bottom: 0px;">
-                <a style="color: #000000 !important;" href="{{ .Permalink }}">{{ .Title }}</a>
+                <a style="color: #000000 !important;" href="{{ .RelPermalink }}">{{ .Title }}</a>
               </h3>
               {{ partial "posts/date.html" . }}
             </div>
