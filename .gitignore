@@ -8,7 +8,10 @@ tailwind.compiled.css
 
 .hugo_build.lock
 
+vendor/bundle
+
 .env
 
 # Sublime text
 blog.sublime-workspace
+
