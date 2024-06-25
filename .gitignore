@@ -11,6 +11,7 @@ tailwind.compiled.css
 vendor/bundle
 
 .env
+.envrc
 
 # Sublime text
 blog.sublime-workspace
