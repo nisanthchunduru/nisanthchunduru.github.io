@@ -4,6 +4,10 @@ service: blog
 # Name of the container image.
 image: nisanth074/blog
 
+builder:
+  remote:
+    arch: amd64
+
 # Deploy to these servers.
 servers:
   web:
