@@ -2,11 +2,22 @@ version: '3.8'
 
 services:
   hugo:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile.development
     volumes:
-      - ./content:/opt/blog/content
+      - .:/opt/blog/
     ports:
       - "1313:1313"
+    command: hugo server --watch --buildDrafts --bind 0.0.0.0 --poll 500ms
+  tailwind:
+    build: 
+      context: .
+      dockerfile: Dockerfile.development
+    volumes:
+      - .:/opt/blog/
+    command: npm run tw:watch
+    tty: true
   hugo-notion:
     build:
       context: .
