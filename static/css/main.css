@@ -7,18 +7,22 @@ html {
   max-width: 768px;
 }
 
-body {
+body, a, .article-date {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
-  /* font-family: "colfax", system-ui, sans-serif; */
-  /* font-family: "Source Sans 3", system-ui, sans-serif; */
-  /* Borrowed from https://fontsource.org/fonts/source-sans-pro/cdn  */
-  font-family: 'Source Sans Pro';
-  /* font-weight: 400; */
+  font-family: 'Ubuntu Sans' !important;
+}
+
+.prose p:not(.article-date), .prose li, .prose ul, .article a {
+  font-family: system-ui, sans-serif !important;
 }
 
 a {
   text-decoration: none !important;
+}
+
+pre {
+  font-family: "Ubuntu Mono";
 }
 
 pre {
