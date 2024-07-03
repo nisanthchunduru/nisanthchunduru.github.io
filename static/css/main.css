@@ -10,19 +10,11 @@ html {
 body, a, .article-date {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
-  font-family: 'Ubuntu Sans' !important;
-}
-
-.prose p:not(.article-date), .prose li, .prose ul, .article a {
-  font-family: system-ui, sans-serif !important;
+  font-family: 'Avenir' !important;
 }
 
 a {
   text-decoration: none !important;
-}
-
-pre {
-  font-family: "Ubuntu Mono";
 }
 
 pre {
