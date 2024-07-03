@@ -30,3 +30,18 @@
   font-weight: bold;
   src: url("/fonts/Colfax/Colfax-Bold.otf");
 }
+
+@font-face {
+  font-family: "adelle-sans";
+  src: url("https://cdn.statically.io/gh/nisanthchunduru/fonts/master/adelle-sans/AdelleSans-Regular.otf");
+}
+@font-face {
+  font-family: "adelle-sans";
+  font-style: italic;
+  src: url("https://cdn.statically.io/gh/nisanthchunduru/fonts/master/adelle-sans/AdelleSans-Italic.otf");
+}
+@font-face {
+  font-family: "adelle-sans";
+  font-weight: bold;
+  src: url("https://cdn.statically.io/gh/nisanthchunduru/fonts/master/adelle-sans/AdelleSans-Bold.otf");
+}
