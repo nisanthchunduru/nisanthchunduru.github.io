@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   hugo:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile.development
     volumes:
@@ -11,7 +11,7 @@ services:
       - "1313:1313"
     command: hugo server --watch --buildDrafts --bind 0.0.0.0 --poll 500ms
   tailwind:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile.development
     volumes:
@@ -23,7 +23,7 @@ services:
       context: .
       dockerfile: Dockerfile.hugo-notion
       args:
-        - HUGO_NOTION_VERSION=cd2a7165ab6f3b7e3793da0c0b06251aafa27a10
+        - HUGO_NOTION_VERSION=412ca3d58625ca8eb1220e945de9e1076ddfa87a
     volumes:
       - ./content:/opt/blog/content
     env_file: .env
