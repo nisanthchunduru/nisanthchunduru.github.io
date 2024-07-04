@@ -1,0 +1,4 @@
+[tasks]
+
+deploy="kamal deploy"
+start="docker compose up --build"
