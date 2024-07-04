@@ -19,11 +19,7 @@ services:
     command: npm run tw:watch
     tty: true
   hugo-notion:
-    build:
-      context: .
-      dockerfile: Dockerfile.hugo-notion
-      args:
-        - HUGO_NOTION_VERSION=412ca3d58625ca8eb1220e945de9e1076ddfa87a
+    image: nisanth074/hugo-notion:latest
     volumes:
       - ./content:/opt/blog/content
     env_file: .env
