@@ -10,7 +10,7 @@ html {
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
-  font-family: 'adelle-sans', system-ui, sans-serif;
+  font-family: 'avenir-next', system-ui, sans-serif;
 }
 
 a {
