@@ -4,19 +4,21 @@
   <body>
     {{ partial "header.html" . }}
 
-    <div class="container mx-auto px-4 prose sm:prose-lg max-w-none text-center" style="margin-top: 3rem;">
+    <div class="container mx-auto px-4 max-w-none">
       <div>
-        <h3 class="font-normal">Hi 👋 I'm Nisanth Chunduru.<br/><br/>I’m an Engineering Lead proficient in Full-stack development and DevOps and passionate about AI/ML, especially Deep Learning and Generative AI.<br/><br/>Welcome to my blog!</h3>
+        <p class="mt-6 md:mt-12" style="text-align: justify; line-height: 1.75;">Hi 👋 I'm Nisanth Chunduru. I’m an Engineering Lead proficient in Full-stack development and DevOps and passionate about AI/ML, especially Deep Learning and Generative AI. Welcome to my blog!</p>
       </div>
-      <div class="border-t" style="margin-top: 2rem;">
-        <h2 style="margin-top: 2rem;">Posts</h2>
+
+      <div class="border-t" style="margin-top: 1.5rem; padding-top: 1rem;">
         {{ range where .Site.RegularPages "Type" "posts" }}
           {{ if ne .Draft true }}
-            <div>
-              <h3 style="margin-bottom: 0px;">
+            <div class="flex flex-col md:flex-row mt-6 md:items-center">
+              <div>
+                <span class="article-date text-sm" style="display: inline-block; width: 100px;">{{ .Date.Format "Jan 2, 2006" }}</span>
+              </div>
+              <div class="mt-2 md:mt-0">
                 <a style="color: #000000 !important;" href="{{ .RelPermalink }}">{{ .Title }}</a>
-              </h3>
-              {{ partial "posts/date.html" . }}
+              </div>
             </div>
           {{ end }}
         {{ end }}
