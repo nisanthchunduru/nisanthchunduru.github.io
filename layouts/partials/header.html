@@ -1,24 +1,21 @@
 <div class="container mx-auto mt-6 md:mt-8 px-4">
-  <nav class="flex justify-between overflow-hidden">
-    <div>
-      <a href="/">
-        {{ partial "logo.html" . }}
-      </a>
-    </div>
-
+  <nav class="flex sm:justify-center overflow-hidden">
     <div class="hidden sm:flex">
       <ul class="flex items-center">
         <li class="mr-8">
-          <a href="/jots">Jots</a>
+          <a class="text-gray-600" href="/">Home</a>
         </li>
         <li class="mr-8">
-          <a href="/resources">Resources</a>
+          <a class="text-gray-600" href="/jots">Jots</a>
         </li>
         <li class="mr-8">
-          <a href="/about">About</a>
+          <a class="text-gray-600" href="/resources">Resources</a>
         </li>
         <li class="mr-8">
-          <a href="/hire">Hire</a>
+          <a class="text-gray-600" href="/about">About</a>
+        </li>
+        <li class="mr-8">
+          <a class="text-gray-600" href="/hire">Hire</a>
         </li>
         <li class="mr-8">
           <a href="https://github.com/nisanthchunduru" target="_blank">
@@ -46,6 +43,11 @@
 
   <div id="nav-hamburger-menu" class="hidden sm:hidden -ml-4 -mr-4 mt-4 py-3 bg-white text-xl text-center">
     <ul>
+      <li class="border-t">
+        <a class="inline-block w-full" href="/">
+          <span class="inline-block my-3 text-sm">Home</span>
+        </a>
+      </li>
       <li class="border-t">
         <a class="inline-block w-full" href="/jots">
           <span class="inline-block my-3 text-sm">Jots</span>
@@ -78,6 +80,17 @@
       </li>
     </ul>
   </div>
+</div>
+
+<div class="mt-12">
+  <a href="/">
+    <img src="/images/square-profile-photo.jpg" alt="Nisanth Chunduru" class="w-24 h-24 rounded-full mx-auto">
+  </a>
+  
+</div>
+
+<div class="mt-4">
+  <h3 class="text-center uppercase text-gray-700" style="letter-spacing: 0.15rem;">Nisanth Chunduru</h3>
 </div>
 
 <script>

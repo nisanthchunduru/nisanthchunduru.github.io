@@ -6,23 +6,25 @@
 
     <div class="container mx-auto px-4 max-w-none" style="flex: 1">
       <div>
-        <p class="mt-6 md:mt-16" style="text-align: justify; line-height: 1.75; font-size: 1.125rem;">Hi 👋 I'm Nisanth Chunduru. I’m an Engineering Lead proficient in Full-stack development and DevOps and passionate about AI/ML, especially Deep Learning and Generative AI. Welcome to my blog!</p>
+        <p class="mt-4 md:mt-4 text-center" style="line-height: 1.75; font-size: 1.125rem;">
+          Hi 👋 I'm Nisanth Chunduru. I’m an Engineering Lead proficient in Full-stack development and DevOps and passionate about AI/ML, especially Deep Learning and Generative AI. Welcome to my blog!
+        </p>
       </div>
 
-      <div class="border-t" style="margin-top: 1.5rem; padding-top: 1rem;">
-        {{ range where .Site.RegularPages "Type" "posts" }}
-          {{ if ne .Draft true }}
-            <div class="flex flex-col md:flex-row mt-6 md:items-center">
-              <div>
-                <span class="article-date text-sm" style="display: inline-block; width: 100px;">{{ .Date.Format "Jan 2, 2006" }}</span>
-              </div>
-              <div class="mt-2 md:mt-0" style="font-size: 1.125rem;">
-                <a style="color: #000000 !important;" href="{{ .RelPermalink }}">{{ .Title }}</a>
-              </div>
-            </div>
-          {{ end }}
-        {{ end }}
-      </div>
+        <div class="border-t mt-12">
+          <div class="text-center">
+            {{ range where .Site.RegularPages "Type" "posts" }}
+              {{ if ne .Draft true }}
+                <div class="mt-12">
+                  <h2 class="text-2xl sm:text-3xl font-bold" style="margin-bottom: 0px;">
+                    <a style="color: #000000 !important;" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  </h2>
+                  {{ partial "posts/date.html" . }}
+                </div>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
     </div>
 
     {{ partial "footer.html" . }}
