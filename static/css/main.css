@@ -10,7 +10,8 @@ html {
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
-  font-family: "source-sans-pro", sans-serif;
+  /* font-family: "source-sans-pro", sans-serif; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 a {
@@ -30,8 +31,4 @@ hr {
   margin-top: 48px;
   margin-bottom: 48px;
   border-top: 1px solid #eee;
-}
-
-a, .article-date {
-  color: #FF3130 !important;
 }

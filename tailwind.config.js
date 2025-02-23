@@ -3,7 +3,17 @@ module.exports = {
   // content: [],
   content: ["content/**/*.md", "layouts/**/*.html"],
   theme: {
-    extend: {},
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            "p": {
+              color: "#000000"
+            },
+          },
+        },
+      },
+    },
   },
   // corePlugins: {
   //   container: false

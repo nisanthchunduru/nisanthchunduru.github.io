@@ -5,15 +5,6 @@
     {{ partial "header.html" . }}
 
     <div class="container mx-auto px-4 mt-8 prose sm:prose-lg max-w-none" style="flex: 1">
-      <a href="/" class="inline-flex items-center py-2 px-4 border rounded-full mb-4">
-        <svg class="h-2 w-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-          <path d="m 12 2 c 0 -0.265625 -0.105469 -0.519531 -0.292969 -0.707031 c -0.390625 -0.390625 -1.023437 -0.390625 -1.414062 0 l -6 6 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 s 0.105469 0.519531 0.292969 0.707031 l 6 6 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 s -0.105469 -0.519531 -0.292969 -0.707031 l -5.292969 -5.292969 l 5.292969 -5.292969 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 z m 0 0" fill="#2e3436"/>
-        </svg>
-        <span class="ml-2 text-sm">
-          Back to Home
-        </span>
-      </a>
-
       <h1 class="text-center" style="margin-bottom: 0;">Jots</h1>
 
       <h4 class="text-center font-normal" style="margin-top: 1rem;">Notes, tips & tricks that are too small to be blog posts</h2>
@@ -24,8 +15,8 @@
         {{ range where .Site.RegularPages "Type" "jots" }}
           {{ if ne .Draft true }}
             <div>
-              <h3 style="margin-bottom: 0px;">
-                <a style="color: #000000 !important;" href="{{ .RelPermalink }}">{{ .Title }}</a>
+              <h2 class="text-2xl sm:text-3xl" style="margin-bottom: 0px;">
+                <a class="font-bold" style="color: #000000 !important;" href="{{ .RelPermalink }}">{{ .Title }}</a>
               </h3>
               {{ partial "posts/date.html" . }}
             </div>
