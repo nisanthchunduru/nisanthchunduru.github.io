@@ -30,3 +30,6 @@ COPY . /opt/blog
 EXPOSE 1313
 
 CMD hugo server --watch --buildDrafts --bind 0.0.0.0
+
+HEALTHCHECK --interval=5s --timeout=5s --start-period=10s --retries=3 \
+  CMD curl --fail http://localhost:1313 || exit 1
