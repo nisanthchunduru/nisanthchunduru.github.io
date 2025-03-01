@@ -1,5 +1,0 @@
-[tasks]
-
-start="docker compose up --build --pull always"
-
-deploy="kamal deploy"
