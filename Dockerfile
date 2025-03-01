@@ -10,26 +10,21 @@ COPY . .
 
 RUN npm run tw:build
 
-# ENTRYPOINT ["tail", "-f", "/dev/null"]
+FROM ruby:3.2-alpine
 
-FROM golang:1.22-alpine AS blog
-
-RUN apk update
-
-RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo
-
-RUN apk add curl
+RUN apk update && apk add --no-cache build-base curl
 
 WORKDIR /opt/blog
 
-COPY --from=css /opt/blog/static/css/tailwind.compiled.css /opt/blog/static/css/tailwind.compiled.css
+COPY Gemfile Gemfile.lock* ./
 
-COPY . /opt/blog
+RUN bundle install
 
-# Expose port for live server
-EXPOSE 1313
+COPY . .
 
-CMD hugo server --watch --buildDrafts --bind 0.0.0.0
+EXPOSE 4567
+
+CMD ["bundle", "exec", "ruby", "server.rb"]
 
 HEALTHCHECK --interval=5s --timeout=5s --start-period=10s --retries=3 \
-  CMD curl --fail http://localhost:1313 || exit 1
+  CMD curl --fail http://localhost:4567 || exit 1

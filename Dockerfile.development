@@ -4,16 +4,21 @@ RUN apk update
 
 RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo
 
-FROM node:20-alpine AS css
+FROM ruby:3.2-alpine
 
-COPY --from=hugo /usr/bin/hugo /usr/bin/hugo
+RUN apk update && apk add --no-cache build-base curl
 
 WORKDIR /opt/blog
 
-COPY package.json package-lock.json ./
+COPY Gemfile Gemfile.lock* ./
 
-RUN npm install
+RUN bundle install
 
-EXPOSE 1313
+COPY . .
 
-CMD hugo server --watch --buildDrafts --bind 0.0.0.0
+EXPOSE 4567
+
+CMD ["bundle", "exec", "ruby", "server.rb"]
+
+HEALTHCHECK --interval=5s --timeout=5s --start-period=10s --retries=3 \
+  CMD curl --fail http://localhost:4567 || exit 1

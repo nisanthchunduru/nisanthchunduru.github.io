@@ -1,0 +1,19 @@
+FROM golang:1.22-alpine AS hugo
+
+RUN apk update
+
+RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo
+
+FROM node:20-alpine AS css
+
+COPY --from=hugo /usr/bin/hugo /usr/bin/hugo
+
+WORKDIR /opt/blog
+
+COPY package.json package-lock.json ./
+
+RUN npm install
+
+EXPOSE 1313
+
+CMD hugo server --watch --buildDrafts --bind 0.0.0.0

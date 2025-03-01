@@ -4,12 +4,21 @@ services:
   hugo:
     build:
       context: .
+      dockerfile: Dockerfile-hugo.development
+    volumes:
+      - .:/opt/blog/
+    command: hugo server --watch --buildDrafts --bind 0.0.0.0 --poll 500ms
+    ports:
+      - "1313:1313"
+  sinatra:
+    build:
+      context: .
       dockerfile: Dockerfile.development
     volumes:
       - .:/opt/blog/
+    command: bundle exec ruby server.rb
     ports:
-      - "1313:1313"
-    command: hugo server --watch --buildDrafts --bind 0.0.0.0 --poll 500ms
+      - "4567:4567"
   tailwind:
     build:
       context: .
