@@ -1,0 +1,33 @@
+<html>
+  {% render 'head' %}
+
+  <body class="flex flex-col" style="min-height: 100vh;">
+    {% render 'header' %}
+
+    <div class="container mx-auto px-4 max-w-none" style="flex: 1">
+      <div>
+        <p class="mt-4 md:mt-4 text-center" style="line-height: 1.75; font-size: 1.125rem;">
+          Engineering Lead proficient in Full-stack development / DevOps and passionate about Deep Learning / Generative AI. Enjoys collaborating with exceptional engineers. Previously led Backend Eng. & DevOps at supportbee.com
+        </p>
+      </div>
+
+      <div class="border-t mt-12">
+        <div class="text-center">
+          {% for post in posts %}
+            {% unless post.draft %}
+              <div class="mt-12">
+                <h2 class="text-2xl sm:text-3xl font-bold" style="margin-bottom: 0px;">
+                  <a style="color: #000000 !important;" href="{{ post.relPermalink }}">{{ post.title }}</a>
+                </h2>
+                {% comment %} {% render 'partials/posts/date' with post %} {% endcomment %}
+                {% render 'partials/posts/date', date: post.date %}
+              </div>
+            {% endunless %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    {% include 'footer' %}
+  </body>
+</html>
