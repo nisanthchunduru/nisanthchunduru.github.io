@@ -50,6 +50,7 @@ configure do
   Liquid::Template.file_system = Liquid::LocalFileSystem.new(File.join(settings.root, "templates"))
   # set :views, File.join(File.dirname(__FILE__), '/templates')
   set :views, "templates"
+  set :host_authorization, { permitted_hosts: [] }
 end
 
 get '/' do
