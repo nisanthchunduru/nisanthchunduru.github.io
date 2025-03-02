@@ -8,9 +8,7 @@
     "tw:watch": "npx tailwindcss -i ./static/css/tailwind.css -o ./static/css/tailwind.compiled.css -w",
     "docker:push": "docker build -t nisanth074/blog:latest . --push",
     "docker:push:x86": "docker buildx build --platform linux/amd64 -t nisanth074/blog:latest . --push",
-    "hugo:start": "docker compose up --build --pull always hugo",
-    "hugo-notion:docker:push:x86": "docker buildx build --platform linux/amd64 -t nisanth074/hugo-notion:latest -f Dockerfile.hugo-notion . --push",
-    "hugo-notion:deploy": "kamal accessory boot hugo-notion",
+    "hugo-notion": "docker compose up --pull always hugo-notion",
     "start": "docker compose up --build --pull always",
     "sinatra:start": "docker compose up --build --pull always sinatra"
   },

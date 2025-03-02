@@ -17,7 +17,7 @@
             {% unless post.draft %}
               <div class="mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold" style="margin-bottom: 0px;">
-                  <a style="color: #000000 !important;" href="{{ post.relPermalink }}">{{ post.title }}</a>
+                  <a style="color: #000000 !important;" href="{{ post.path }}">{{ post.title }}</a>
                 </h2>
                 {% comment %} {% render 'partials/posts/date' with post %} {% endcomment %}
                 {% render 'partials/posts/date', date: post.date %}

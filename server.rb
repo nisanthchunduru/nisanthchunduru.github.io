@@ -16,32 +16,34 @@ def markdown_to_html(markdown)
   ).render(preprocessed_markdown)
 end
 
-def fetch_post(post_slug)
-  post_file_name = post_slug + ".md"
-  post_file_path = File.expand_path(File.join('content', 'posts', post_file_name))
-  post_file_text = File.read(post_file_path)
-  post_file_header_yaml = post_file_text.match(/^---\n*[\s\S]*?\n---\n/)[0]
-  post_file_header_hash = YAML.safe_load(post_file_header_yaml).to_h
-  post_markdown = post_file_text.gsub(/^---\n*[\s\S]*?\n---\n/, '')
-  post_html = markdown_to_html(post_markdown)
-  post_date = Time.parse(post_file_header_hash['date'])
-  post = post_file_header_hash.merge({
-    "date" => post_date.strftime('%b %d, %Y'),
-    "html" => post_html,
-    "relPermalink" => "/posts/#{post_slug}"
+def fetch_page(page_path)
+  page_file_path = File.expand_path(File.join('content', "#{page_path}.md"))
+  page_file_text = File.read(page_file_path)
+  page_file_header_yaml = page_file_text.match(/^---\n*[\s\S]*?\n---\n/)[0]
+  page_file_header_hash = YAML.safe_load(page_file_header_yaml).to_h
+  page_markdown = page_file_text.gsub(/^---\n*[\s\S]*?\n---\n/, '')
+  page_html = markdown_to_html(page_markdown)
+  page_date = Time.parse(page_file_header_hash['date'])
+  page = page_file_header_hash.merge({
+    "html" => page_html,
+    "path" => page_path
   })
-  return post
+  if page_file_header_hash['date']
+    page_date = Time.parse(page_file_header_hash['date'])
+    page['date'] = page_date.strftime('%b %d, %Y')
+  end
+  return page
 end
 
-def fetch_all_posts
-  post_files = Dir.glob('content/posts/*.md')
-  posts = []
-  post_files.each do |post_file|
-    post_slug = File.basename(post_file, '.md')
-    post = fetch_post(post_slug)
-    posts << post
+def fetch_subpages(path)
+  subpage_file_paths = Dir.glob(File.join('content', path, '*.md'))
+  subpages = []
+  subpage_file_paths.each do |subpage_file_path|
+    subpage_file_slug = File.basename(subpage_file_path, '.md')
+    subpage = fetch_page(File.join(path, subpage_file_slug))
+    subpages << subpage
   end
-  return posts
+  return subpages
 end
 
 configure do
@@ -51,19 +53,22 @@ configure do
 end
 
 get '/' do
-  posts = fetch_all_posts
+  posts = fetch_subpages('/posts')
   liquid :index, locals: { posts: posts }
 end
 
 get '/posts/:post_slug' do
-  post = fetch_post(params[:post_slug])
+  post_slug = params[:post_slug]
+  post = fetch_page("/posts/#{post_slug}")
   liquid :post, locals: post
 end
 
 get '/bookmarks' do
-  liquid :bookmarks
+  page = fetch_page('/bookmarks')
+  liquid :bookmarks, locals: page
 end
 
 get '/about' do
-  liquid :about
+  page = fetch_page('/about')
+  liquid :about, locals: page
 end
