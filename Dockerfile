@@ -24,7 +24,5 @@ COPY . .
 
 EXPOSE 4567
 
-CMD ["bundle", "exec", "ruby", "server.rb"]
+CMD ["bundle", "exec", "ruby", "server.rb", "-o", "0.0.0.0"]
 
-HEALTHCHECK --interval=5s --timeout=5s --start-period=10s --retries=3 \
-  CMD curl --fail http://localhost:4567 || exit 1
