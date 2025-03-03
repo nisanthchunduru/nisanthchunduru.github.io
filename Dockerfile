@@ -22,6 +22,8 @@ RUN bundle install
 
 COPY . .
 
+COPY --from=css /opt/blog/static/css/tailwind.compiled.css /opt/blog/static/css/tailwind.compiled.css
+
 EXPOSE 4567
 
 CMD ["bundle", "exec", "ruby", "server.rb", "-o", "0.0.0.0"]

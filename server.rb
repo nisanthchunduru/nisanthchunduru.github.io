@@ -47,6 +47,7 @@ def fetch_subpages(path)
 end
 
 configure do
+  set :public_folder, File.expand_path('static', File.dirname(__FILE__))
   Liquid::Template.file_system = Liquid::LocalFileSystem.new(File.join(settings.root, "templates"))
   # set :views, File.join(File.dirname(__FILE__), '/templates')
   set :views, "templates"
