@@ -47,12 +47,38 @@ def fetch_subpages(path)
 end
 
 configure do
+  set :bind, '0.0.0.0'
+  set :host_authorization, { permitted_hosts: [] }
   set :public_folder, File.expand_path('static', File.dirname(__FILE__))
   Liquid::Template.file_system = Liquid::LocalFileSystem.new(File.join(settings.root, "templates"))
   # set :views, File.join(File.dirname(__FILE__), '/templates')
   set :views, "templates"
-  set :host_authorization, { permitted_hosts: [] }
 end
+
+module AssetLiquidFilters
+  def asset_url(file)
+    asset_hash = cached_asset_hash(file) || "nohash"
+    "/#{file}?v=#{asset_hash}"
+  end
+
+  private
+
+  def cached_asset_hash(file)
+    @asset_hashes ||= {}
+    return @asset_hashes[file] if @asset_hashes.key?(file)
+
+    # public_folder = settings.public_folder
+    public_folder = File.expand_path('static', File.dirname(__FILE__))
+    asset_path = File.join(public_folder, file)
+    if File.exist?(asset_path)
+      @asset_hashes[file] = Digest::MD5.file(asset_path).hexdigest[0, 10]
+    else
+      @asset_hashes[file] = nil
+    end
+  end
+end
+
+Liquid::Template.register_filter(AssetLiquidFilters)
 
 get '/' do
   posts = fetch_subpages('/posts')
