@@ -14,10 +14,6 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-a {
-  text-decoration: none !important;
-}
-
 pre {
   background-color: #FCFCFC !important;
   color: rgb(55, 65, 81) !important;
