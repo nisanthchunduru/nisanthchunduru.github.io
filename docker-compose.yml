@@ -7,16 +7,14 @@ services:
       dockerfile: Dockerfile.development
     volumes:
       - .:/opt/blog/
-    command: bundle exec ruby server.rb
     ports:
       - "4567:4567"
   tailwind:
     build:
       context: .
-      dockerfile: Dockerfile.development
+      dockerfile: Dockerfile-tailwind.development
     volumes:
       - .:/opt/blog/
-    command: npm run tw:watch
     tty: true
   hugo-notion:
     image: nisanth074/hugo-notion
