@@ -1,8 +1,10 @@
 # blog
 
-This repository contains the source code of my [blog](https://nisanthchunduru.github.io)
+Source code of my blog [nisanthchunduru.com](https://nisanthchunduru.com)
 
-The blog is built with [Hugo](https://gohugo.io/), a fast static site generator written in Go lang. Blog posts are authored in Notion https://inquisitive-bumper-4db.notion.site/blog_content-0f1b55769779411a95df1ee9b4b070c9?pvs=4 which serves as a CMS (Content Management System).
+The blog is built upon [Notion](https://notion.so) and [Sinatra](https://sinatrarb.com).
+
+Blog posts are authored in Notion https://inquisitive-bumper-4db.notion.site/blog_content-0f1b55769779411a95df1ee9b4b070c9?pvs=4 which serves as a CMS (Content Management System).
 
 ![image](https://github.com/nisanthchunduru/nisanthchunduru.github.io/assets/1789832/f9a6bf9d-9994-46cf-bdce-baf7d8ef9f04)
 
