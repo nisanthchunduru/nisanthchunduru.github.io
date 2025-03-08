@@ -26,12 +26,9 @@ def fetch_page(page_path)
   page_date = Time.parse(page_file_header_hash['date'])
   page = page_file_header_hash.merge({
     "html" => page_html,
-    "path" => page_path
+    "path" => page_path,
+    "date" => page_file_header_hash['date']
   })
-  if page_file_header_hash['date']
-    page_date = Time.parse(page_file_header_hash['date'])
-    page['date'] = page_date.strftime('%b %d, %Y')
-  end
   return page
 end
 
@@ -55,10 +52,20 @@ configure do
   set :views, "templates"
 end
 
-module AssetLiquidFilters
+module LiquidFilters
   def asset_url(file)
     asset_hash = cached_asset_hash(file) || "nohash"
     "/#{file}?v=#{asset_hash}"
+  end
+
+  def sort_by(entities, key, direction='desc')
+    sorted_entities = entities.sort_by { |e| e[key] }
+    direction == 'desc' ? sorted_entities.reverse : sorted_entities
+  end
+
+  def format_time(time, format = '%b %d, %Y')
+    return '' if time.nil?
+    Time.parse(time).strftime(format)
   end
 
   private
@@ -78,10 +85,11 @@ module AssetLiquidFilters
   end
 end
 
-Liquid::Template.register_filter(AssetLiquidFilters)
+Liquid::Template.register_filter(LiquidFilters)
 
 get '/' do
   posts = fetch_subpages('/posts')
+  # posts = fetch_subpages('/posts').sort_by { |post| post['date'] }.reverse
   liquid :index, locals: { posts: posts }
 end
 
