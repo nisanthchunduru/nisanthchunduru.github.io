@@ -1,0 +1,8 @@
+services:
+  sinatra:
+    image: nisanth074/blog:latest
+    volumes:
+      - /opt/blog-content:/opt/blog/content/
+    ports:
+      - "80:4567"
+    restart: unless-stopped

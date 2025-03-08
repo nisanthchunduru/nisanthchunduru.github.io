@@ -1,0 +1,4 @@
+npm run docker:push:x86
+scp docker-compose.production.yml root@150.136.2.200:/opt/blog/docker-compose.yml
+ssh root@150.136.2.200 "cd /opt/blog && docker compose down"
+ssh root@150.136.2.200 "cd /opt/blog && docker compose up -d --pull always"
